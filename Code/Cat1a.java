@@ -65,8 +65,10 @@ public class Cat1a
     {
         Scanner sc = new Scanner(System.in);
         boolean runningStringConfirm = true;
-        String confirmInput;
-        String stringInput;
+        String stringInput = "";
+
+        boolean runningCaseToConvertTo = true;
+
 
         while(runningStringConfirm == true)
         {
@@ -80,7 +82,7 @@ public class Cat1a
             System.out.println(" > (N)o ");
             System.out.print("\n\nPlease make your selection: ");
             
-            confirmInput = sc.nextLine().toLowerCase();
+            String confirmInput = sc.nextLine().toLowerCase();
 
             switch(confirmInput)
             {
@@ -98,7 +100,32 @@ public class Cat1a
 
         }
 
+        while(runningCaseToConvertTo == true)
+        {
+            System.out.println("\nTo which case would you like to convert to?");
+            System.out.println(" > (U)ppercase");
+            System.out.println(" > (L)owercase");
+            System.out.print("\n\nPlease make your selection: ");
 
+            String caseToConvertInput = sc.nextLine();
+
+            switch(caseToConvertInput)
+            {
+                case "U":
+                    runConvertToUpper(stringInput);
+                    runningCaseToConvertTo = false;
+                    break;
+
+                case "L":
+                    runConvertToLower(stringInput);
+                    runningCaseToConvertTo = false;
+                    break;
+
+                default:
+                    System.out.println("Your input was invalid");
+            }
+
+        }
 
 
     }
@@ -107,4 +134,17 @@ public class Cat1a
     {
 
     }
+
+    public static void runConvertToUpper(String originalString)
+    {
+
+    }
+
+    public static void runConvertToLower(String originalString)
+    {
+
+    }
+
+
+
 }
