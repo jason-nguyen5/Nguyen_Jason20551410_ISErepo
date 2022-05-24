@@ -3,6 +3,17 @@
 # Jason Nguyen
 #
 
+Each function of each category will get it's own class where they the scripts are called from and used by a main file. The main file will be used to run the code, however it will not contain a large majority of the code. All the code for each function will be self contained and shouldn't need to rely on other files, however there may still be a possibility that is overlooked. 
+
+Each function will ask the user whether or not they'd like to input data in the form of a string through their keyboard or through the reading of a data file. Each data file will need to have the correct formatting which the program will list out for the user. Failure to comply to these standards may affect how the program operates. 
+
+Each "function" from each category will have many "sub-modules" in which it calls upon; these are just methods. Each method will run a dedicated functionality to avoid poor coherancy.
+
+The programs will run in looped systems which will require the user to manual exit the program through entering the correct menu options when displayed. The program should not break under most circumstances, unless purposely close by the user; i.e, through CTRL + C or exit through the menus.
+
+Variables aren't chosen now as during programming, appropriate variable names will be chosen on the spot incase design or functionality of the program is slightly alter from the self-imposed guidelines set below.
+
+Below is a basic description of what the program will do:
 Category 1:
 a. Converting a given string to upper case or lower case.
 	> Ask user to enter in any string they wish to use.
@@ -57,3 +68,5 @@ c. Convert a number which represents a time given in hours to minutes and vice v
 	> Sub-module determines which conversion to use from the char that represents which unit they are coming from.
 	> Afterwards, they take the units and convert them to the unit they user wants.
 	> Then print out the result to the user.
+
+
