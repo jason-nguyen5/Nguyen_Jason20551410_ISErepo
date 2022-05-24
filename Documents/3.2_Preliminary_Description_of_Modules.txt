@@ -7,7 +7,7 @@ Each function of each category will get it's own class where they the scripts ar
 
 Each function will ask the user whether or not they'd like to input data in the form of a string through their keyboard or through the reading of a data file. Each data file will need to have the correct formatting which the program will list out for the user. Failure to comply to these standards may affect how the program operates. 
 
-Each "function" from each category will have many "sub-modules" in which it calls upon; these are just methods. Each method will run a dedicated functionality to avoid poor coherancy.
+Each "function" from each category will have many "sub-modules" in which it calls upon; these are just methods. Each method will run a dedicated functionality to avoid poor coherency.
 
 The programs will run in looped systems which will require the user to manual exit the program through entering the correct menu options when displayed. The program should not break under most circumstances, unless purposely close by the user; i.e, through CTRL + C or exit through the menus.
 
