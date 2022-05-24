@@ -16,13 +16,30 @@ a. Converting a given string to upper case or lower case.
 	> Afterwards print the string to the user and end the program.
 
 b. Identify whether numeric values are in a given string.
-	Text
+	> Ask user to enter in any string they wish to use.
+	> Afterwards ask them to confirm, in a try, while loop.
+		- If NO then re-enter their string
+		- If YES continue with program
+	> Afterwards convert the string into a char array.
+	> Loop through this char array check if the char is a digit using isDigit().
+	> And if so print out that a number was found in the string.
 
 c. Identify whether a given string is a valid number or not.
-	Text
-
+	> Ask user to enter in any string they'd like to use.
+	> Afterward confirm if they'd like to continute with their string.
+	> Afterwards in a while true loop, run a try catch.
+	> Attempt to convert the number into a double.
+		- If it can, set running loop to false and print out the value.
+		- If it cannot, and errors occur, set running loop to false and print out that the number wasn't valid.
+	> Additional code for converting numbers in the form of words can be added if there is time.
+	
 d. Remove any numeric values in a give string and then convert the string to upper case of lower case.
-	Text
+	> Ask the user to enter in a string.
+	> Confirm if they'd like to continue.
+	> Convert the string to a char array.
+	> Loop throuhg this char array and check if the char is a digit using isDigit().
+	> Only when it isn't, set a string to the string + the current char.
+	> Print out the string and end the program.
 
 Category 2:
 c. Convert a number which represents a time given in hours to minutes and vice cersa, and time given in minutes to seconds and vice versa.
