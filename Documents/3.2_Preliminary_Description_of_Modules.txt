@@ -5,6 +5,9 @@
 
 Category 1:
 a. Converting a given string to upper case or lower case.
+	> Ask user if they'd like to enter in a string or to read from file
+		- If from file ask user to type the name and extension from file listing support, then read and run the rest of program using these values.
+		- If manual run rest of code.
 	> Ask user to enter in any string they wish to use.
 	> Afterwards ask them to confirm, in a try, while loop.
 		- If NO then re-enter their string
@@ -13,36 +16,48 @@ a. Converting a given string to upper case or lower case.
 		- If UPPERCASE then run Uppercase sub-module
 		- If LOWERCASE tehn run Lowercase sub-module
 	> Each sub-module uses java.text's toLowerCase() or toUpperCase() respectively.
-	> Afterwards print the string to the user and end the program.
+	> Afterwards print the string to the user and save to a file.
 
 b. Identify whether numeric values are in a given string.
+	> Ask user if they'd like to enter in a string or read from file.
+		- If from file ask user to type the name and extension from file listing support, then read and run the rest of program using these values.
+		- If manual run rest of code.
 	> Ask user to enter in any string they wish to use.
 	> Afterwards ask them to confirm, in a try, while loop.
 		- If NO then re-enter their string
 		- If YES continue with program
 	> Afterwards convert the string into a char array.
 	> Loop through this char array check if the char is a digit using isDigit().
-	> And if so print out that a number was found in the string.
+	> And if so print out that a number was found in the string and save to a file.
 
 c. Identify whether a given string is a valid number or not.
+	> Ask user if they'd like to enter in a string or read from file.
+                - If from file ask user to type the name and extension from file listing support, then read and run the rest of program using these values.
+                - If manual run rest of code.
 	> Ask user to enter in any string they'd like to use.
 	> Afterward confirm if they'd like to continute with their string.
 	> Afterwards in a while true loop, run a try catch.
 	> Attempt to convert the number into a double.
-		- If it can, set running loop to false and print out the value.
+		- If it can, set running loop to false and print out the value and save to file.
 		- If it cannot, and errors occur, set running loop to false and print out that the number wasn't valid.
 	> Additional code for converting numbers in the form of words can be added if there is time.
 	
 d. Remove any numeric values in a give string and then convert the string to upper case of lower case.
+	> Ask user if they'd like to enter in a string or read from file.
+                - If from file ask user to type the name and extension from file listing support, then read and run the rest of program using these values.
+                - If manual run rest of code.
 	> Ask the user to enter in a string.
 	> Confirm if they'd like to continue.
 	> Convert the string to a char array.
 	> Loop throuhg this char array and check if the char is a digit using isDigit().
 	> Only when it isn't, set a string to the string + the current char.
-	> Print out the string and end the program.
+	> Print out the string and save to file.
 
 Category 2:
 c. Convert a number which represents a time given in hours to minutes and vice cersa, and time given in minutes to seconds and vice versa.
+	> Ask user if they'd like to enter in a string or read from file.
+                - If from file ask user to type the name and extension from file listing support, then read and run the rest of program using these values.
+                - If manual run rest of code.
 	> Ask the user which unit they would like convert from; Hours, Minutes, Seconds.
 	> Run a case, where if the answer was:
 		- Hours, they are then asked to enter hours.
@@ -56,4 +71,4 @@ c. Convert a number which represents a time given in hours to minutes and vice c
 	> After they've choose then the unit they wish to go to, the program will run the respective sub-module.
 	> Sub-module determines which conversion to use from the char that represents which unit they are coming from.
 	> Afterwards, they take the units and convert them to the unit they user wants.
-	> Then print out the result to the user.
+	> Then print out the result to the user and save to file.
