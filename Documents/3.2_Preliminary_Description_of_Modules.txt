@@ -1,0 +1,21 @@
+#
+# 20551410
+# Jason Nguyen
+#
+
+Category 1:
+a. Converting a given string to upper case or lower case.
+	Text
+
+b. Identify whether numeric values are in a given string.
+	Text
+
+c. Identify whether a given string is a valid number or not.
+	Text
+
+d. Remove any numeric values in a give string and then convert the string to upper case of lower case.
+	Text
+
+Category 2:
+c. Convert a number which represents a time given in hours to minutes and vice cersa, and time given in minutes to seconds and vice versa.
+	Text
