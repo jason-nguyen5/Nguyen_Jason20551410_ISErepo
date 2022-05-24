@@ -5,7 +5,15 @@
 
 Category 1:
 a. Converting a given string to upper case or lower case.
-	Text
+	> Ask user to enter in any string they wish to use.
+	> Afterwards ask them to confirm, in a try, while loop.
+		- If NO then re-enter their string
+		- If YES continue with program
+	> Ask if they'd like to convert to upper case or lower case
+		- If UPPERCASE then run Uppercase sub-module
+		- If LOWERCASE tehn run Lowercase sub-module
+	> Each sub-module uses java.text's toLowerCase() or toUpperCase() respectively.
+	> Afterwards print the string to the user and end the program.
 
 b. Identify whether numeric values are in a given string.
 	Text
