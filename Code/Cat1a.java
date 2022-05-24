@@ -53,7 +53,7 @@ public class Cat1a
 
     public static void printInputType()
     {
-        System.out.println("Would you like to: ");
+        System.out.println("\nWould you like to: ");
         System.out.println(" > (R)ead from a file?");
         System.out.println(" > (M)anually enter data?");
         System.out.println(" > (E)xit program");
@@ -107,16 +107,16 @@ public class Cat1a
             System.out.println(" > (L)owercase");
             System.out.print("\n\nPlease make your selection: ");
 
-            String caseToConvertInput = sc.nextLine();
+            String caseToConvertInput = sc.nextLine().toLowerCase();
 
             switch(caseToConvertInput)
             {
-                case "U":
+                case "u":
                     runConvertToUpper(stringInput);
                     runningCaseToConvertTo = false;
                     break;
 
-                case "L":
+                case "l":
                     runConvertToLower(stringInput);
                     runningCaseToConvertTo = false;
                     break;
@@ -137,12 +137,16 @@ public class Cat1a
 
     public static void runConvertToUpper(String originalString)
     {
-
+        String newString = originalString.toUpperCase();
+        System.out.println("\nYour original string was: " + originalString);
+        System.out.println("The uppercase version is: " + newString);
     }
 
     public static void runConvertToLower(String originalString)
     {
-
+        String newString = originalString.toLowerCase();
+        System.out.println("\nYour original string was: " + originalString);
+        System.out.println("The lowercase version is: " + newString);
     }
 
 
