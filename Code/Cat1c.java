@@ -9,9 +9,9 @@ public class Cat1c
         Scanner sc = new Scanner(System.in);
         boolean runningOne = true;
 
-        System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = =");
-        System.out.println("Welcome to the Uppercase Lowercase Converter Program");
-        System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = =");
+        System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
+        System.out.println("Welcome to the Valid Numerics-in-String Identify Program");
+        System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
         System.out.println("");
 
         while(runningOne == true)

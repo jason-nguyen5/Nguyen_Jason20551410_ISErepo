@@ -9,9 +9,9 @@ public class Cat2c
         Scanner sc = new Scanner(System.in);
         boolean runningOne = true;
 
-        System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = =");
-        System.out.println("Welcome to the Uppercase Lowercase Converter Program");
-        System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = =");
+        System.out.println("= = = = = = = = = = = = = = = = = = = = = =");
+        System.out.println("Welcome to the Time Unit Converter Program");
+        System.out.println("= = = = = = = = = = = = = = = = = = = = = =");
         System.out.println("");
 
         while(runningOne == true)
