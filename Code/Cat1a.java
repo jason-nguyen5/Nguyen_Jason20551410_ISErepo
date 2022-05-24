@@ -75,9 +75,10 @@ public class Cat1a
             stringInput = sc.nextLine();
             
             System.out.println("\nYou have entered: " + stringInput);
-            System.out.println("Would you like to continue? ");
+            System.out.println("\nWould you like to continue? ");
             System.out.println(" > (Y)es ");
             System.out.println(" > (N)o ");
+            System.out.print("\n\nPlease make your selection: ");
             
             confirmInput = sc.nextLine().toLowerCase();
 
