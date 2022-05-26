@@ -32,29 +32,30 @@ public class Menu
 					runningMain = false;
 					break;
 				case "1":
-					Cat1a.main(args);
+					Functions.a_ConvertCases(listOfStrings);;
 					break;
 	
 				case "2":
-					Cat1b.main(args);
+					//
 					break;
 	
 				case "3":
-					Cat1c.main(args);
+					//
 					break;
 	
 				case "4":
-					Cat1d.main(args);
+					//
 					break;
 	
 				case "5":
-					Cat2c.main(args);
+					//
 					break;
 				default:
 					System.out.println("Choice was invalid");
 			}
 			
 		}
+		sc.close();
 
 	}
 
@@ -98,6 +99,7 @@ public class Menu
 					System.out.println("Choice was invalid");
 			}
 		}
+		sc.close();
 
 		return returnList;
 	}
@@ -136,6 +138,7 @@ public class Menu
 				System.out.println("That input was invalid");
             }
 		}
+		sc.close();
 		
 		return stringInput;
 	}
@@ -161,6 +164,7 @@ public class Menu
         stringInput = stringInputAndConfirm("Please enter the string you wish to convert: ");
 
 		returnList.add(runStringToCharArray(stringInput));
+		sc.close();
 
 		return returnList;
 	}
@@ -174,6 +178,7 @@ public class Menu
         stringInput = stringInputAndConfirm("Please enter the path to the file, including the extension: ");
 
 		returnList = readFile(stringInput);
+		sc.close();
 
 		return returnList;
 	}
@@ -204,7 +209,7 @@ public class Menu
 
 				char[] tempArray = runStringToCharArray(line);
 				returnList.add(tempArray);
-				
+
 				line = bufRdr.readLine();
 			}
 			fileStream.close();

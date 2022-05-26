@@ -82,13 +82,69 @@ public class Functions
 		return wantUpper;
 	}
 
+	public static int[] arrayToUpper(int[] inputArray)
+	{
+		int[] returnArray = new int[inputArray.length];
+		for(int i = 0; i < inputArray.length; i++)
+		{
+			if((inputArray[i] < 123) && (inputArray[i] > 96))
+			{
+				returnArray[i] = inputArray[i] - 32;
+			}
+			else
+			{
+				returnArray[i] = inputArray[i];
+			}
+		}
+
+		return returnArray;
+	}
+
+	public static int[] arrayToLower(int[] inputArray)
+	{
+		int[] returnArray = new int[inputArray.length];
+		for(int i = 0; i < inputArray.length; i++)
+		{
+			if((inputArray[i] < 123) && (inputArray[i] > 96))
+			{
+				returnArray[i] = inputArray[i] - 32;
+			}
+			else
+			{
+				returnArray[i] = inputArray[i];
+			}
+		}
+
+		return returnArray;
+	}
+
 	public static void a_ConvertCases(List<char[]> inputCharList)
 	{
 		boolean wantUpper = askWhichCaseMenu();
 		
 		for(int i = 0; i < inputCharList.size(); i++)
 		{
+			char[] charArray = inputCharList.get(i);
+			int[] asciiArray = charArrayToAsciiArray(charArray);
+			int[] convertedAsciiArray;
+			String originalString = asciiArrayToString(asciiArray);
 
+			if(wantUpper == true)
+			{
+				convertedAsciiArray = arrayToUpper(asciiArray);
+
+			}
+			else
+			{
+				convertedAsciiArray = arrayToLower(asciiArray);
+			}
+
+			String convertedString = asciiArrayToString(convertedAsciiArray);
+
+			System.out.println("Your original string was: " + originalString);
+			System.out.println("Your converted string is: " + convertedString);
+
+			writeOneRow("a_ConvertCases.txt", convertedString);
 		}
 	}
 
