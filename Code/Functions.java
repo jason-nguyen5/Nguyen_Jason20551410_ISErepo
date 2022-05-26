@@ -82,9 +82,14 @@ public class Functions
 		return wantUpper;
 	}
 
-	public static void a_ConvertCases(List<String> inputStringList)
+	public static void a_ConvertCases(List<char[]> inputCharList)
 	{
 		boolean wantUpper = askWhichCaseMenu();
+		
+		for(int i = 0; i < inputCharList.size(); i++)
+		{
+
+		}
 	}
 
 

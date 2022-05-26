@@ -102,16 +102,15 @@ public class Menu
 		return returnList;
 	}
 
-	public static List<char[]> runManualInput()
+	public static String stringInputAndConfirm(String query)
 	{
 		Scanner sc = new Scanner(System.in);
         boolean runningStringConfirm = true;
         String stringInput = "";
-		List<char[]> returnList = new ArrayList<char[]>();
-		
-        while(runningStringConfirm == true)
+
+		while(runningStringConfirm == true)
         {
-			System.out.print("\nPlease enter the string you wish to convert: ");
+			System.out.print("\n" + query);
 			
             stringInput = sc.nextLine();
             
@@ -138,25 +137,93 @@ public class Menu
             }
 		}
 		
+		return stringInput;
+	}
+
+	public static char[] runStringToCharArray(String stringInput)
+	{
 		char[] charArray = new char[stringInput.length()];
 
 		for(int i = 0; i < stringInput.length(); i++)
 		{
 			charArray[i] = stringInput.charAt(i);
-
 		}
 
-		returnList.add(charArray);
+		return charArray;
+	}
+
+	public static List<char[]> runManualInput()
+	{
+		Scanner sc = new Scanner(System.in);
+        String stringInput = "";
+		List<char[]> returnList = new ArrayList<char[]>();
+		
+        stringInput = stringInputAndConfirm("Please enter the string you wish to convert: ");
+
+		returnList.add(runStringToCharArray(stringInput));
 
 		return returnList;
 	}
 
 	public static List<char[]> runAutomaticInput()
 	{
-		//
+		Scanner sc = new Scanner(System.in);
+        String stringInput = "";
+		List<char[]> returnList = new ArrayList<char[]>();
+		
+        stringInput = stringInputAndConfirm("Please enter the path to the file, including the extension: ");
+
+		returnList = readFile(stringInput);
+
+		return returnList;
 	}
 
+	// Using code from COMP1007 Lecture 8
+	public static List<char[]> readFile(String inFileName)
+	{
+		FileInputStream fileStream = null;
+		InputStreamReader isr;
+		BufferedReader bufRdr;
+		int lineNum;
+		String line;
 
+		List<char[]> returnList = new ArrayList<char[]>();
+		
+		try
+		{
+			fileStream = new FileInputStream(inFileName);
+			isr = new InputStreamReader(fileStream);
+			bufRdr = new BufferedReader(isr);
+			lineNum = 0;
+			
+			line = bufRdr.readLine();
 
+			while(line != null)
+			{
+				lineNum = lineNum + 1;
+
+				char[] tempArray = runStringToCharArray(line);
+				returnList.add(tempArray);
+				
+				line = bufRdr.readLine();
+			}
+			fileStream.close();
+		}
+		catch(IOException errorDetails)
+		{
+		if(fileStream != null)
+		{
+			try
+			{
+				fileStream.close();
+			}
+			catch(IOException ex2)
+			{ }
+		}
+		System.out.println("Error in fileProcessing: " + errorDetails.getMessage());
+		}
+
+		return returnList;
+	}
 
 }
