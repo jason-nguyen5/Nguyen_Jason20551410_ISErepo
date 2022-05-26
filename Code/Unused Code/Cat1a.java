@@ -48,7 +48,8 @@ public class Cat1a
             }
         }
         
-        
+    
+        sc.close();
     }
 
     public static void printInputType()
