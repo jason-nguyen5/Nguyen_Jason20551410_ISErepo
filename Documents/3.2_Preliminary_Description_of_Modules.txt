@@ -80,7 +80,9 @@ Before, my program would have had a lot of repeated code and thus would have gre
 Below is how my new code will run:
 - Main:
 	> Ask the user if they'd like to manually write in data using their keyboard or read the data from a file instead. This'll be ran in a loop to avoid an incorrect choice from crashing the program or causing it to end prematurely.
-		- If the user wishes to read from a file, the program will open another menu and then ask them to type the path to the file including the file extension. This menu will also give an example of what data should be within this file. For example it should have each line be a new string. Afterwards the name of this file will be saved as a string and then passed into a read file function that'll read the lines and convert each line in an array, and then each array will be added to list to be called from.
+		- If the user wishes to read from a file, the program will open another menu and then ask them to type the path to the file including the file extension. This menu will also give an example of what data should be within this file. 
+			>>> For example it should have each line be a new string. 
+			>>> Afterwards the name of this file will be saved as a string and then passed into a read file function that'll read the lines and convert each line in an array, and then each array will be added to list to be called from.
 		- If the user wishes to manually type in the string, they will prompted to type in their string and afterwards, it will be converted into a char array which will be added to a list to be called from.
 		- If the user wishes to exit the program, they can select the option and it will just a variable that runs the loop to false, causing the loop to end.
 	> After data has be registered into a list, there will be a second menu asking the user to choose with function they'd like to call upon.
