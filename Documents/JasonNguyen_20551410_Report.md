@@ -36,5 +36,21 @@ Aferwards, the user can choose any conversion they'd like and the program will r
 ---
 ## Module Description
 ---
-<p>My program currently has five functions. All of <b>Category 1 and Category 2's (C)</b> conversions. The program can. Each module was heavily described in the the Preliminary Description documents.</p>
+<p style = "text-align: justify;">My program currently has five main functions. All of <b>Category 1 and Category 2's (C)</b> conversions. However, there more methods contained in the program exist to aid in the opperation of the system. They were designed to enable the repetition of code without worrying about data redundacy. Each of the main modules was heavily described in the the Preliminary Description documents, however smaller functions haven't been.</p>
 
+### 1A. Converting a String to Uppercase or Lowercase
+
+<p style = "text-align: justify;">This function is intended to be used to take a string in and then convert the letter to uppercase or lowercase based on the user's choice. The program should ignore all non-letter characters and only perform the capitilization on the letters of the English alphabet. It doesn't support special letters with tones, as programming for each case would cause the program to contain a lot of if-else or cases, which would hinder the readability of the program. A rough description of how the program works is quoted below: <br>
+
+> - This method will run a menu loop that asks the user to choose between converting to uppercase and lowercase.
+> - Afterwards the program will run a for loop that will get the i'th element of the list, and set that as a temp array.
+> - This array will then passed into "charArrayToAsciiArray" to which it'll then be set to the temp array again.
+> - This temp array will then be passed into a function called "arrayToUpper" or "arrayToLower" depending on the option chosen by the user.
+>   - The program will check if the int is within the range of being either lowercase or uppercase and convert them to the right case by adding or subtracting 32 for each respective cases.
+>   - It'll loop through the entire array and set the current element of the passed array.
+>   - Then it'll run asciiArrayToString method and set the output to "returnString"
+>   -  Afterwards it'll return this string.
+> - The returned value will then be saved into a "convertedString" variable.
+> - And the program will print both the original and "convertedString" variable out to the user and save it into a next row of a new file.
+> - The program will then loop through and then afterwards end itself and save that new file.
+</p>
