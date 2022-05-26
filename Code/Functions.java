@@ -45,7 +45,47 @@ public class Functions
 		}
 	}
 
-	
+	public static boolean askWhichCaseMenu()
+	{
+		boolean runningCaseToConvertTo = true;
+		boolean wantUpper = false;
+		Scanner sc = new Scanner(System.in);
+		
+		while(runningCaseToConvertTo == true)
+        {
+            System.out.println("\nTo which case would you like to convert to?");
+            System.out.println(" > (U)ppercase");
+            System.out.println(" > (L)owercase");
+            System.out.print("\n\nPlease make your selection: ");
+
+            String caseToConvertInput = sc.nextLine().toLowerCase();
+
+            switch(caseToConvertInput)
+            {
+                case "u":
+					wantUpper = true;
+                    runningCaseToConvertTo = false;
+                    break;
+
+                case "l":
+					wantUpper = false;
+                    runningCaseToConvertTo = false;
+                    break;
+
+                default:
+                    System.out.println("Your input was invalid");
+            }
+
+        }
+
+		sc.close();
+		return wantUpper;
+	}
+
+	public static void a_ConvertCases(List<String> inputStringList)
+	{
+		boolean wantUpper = askWhichCaseMenu();
+	}
 
 
 }
