@@ -1,3 +1,6 @@
+import java.util.*;
+import java.io.*;
+
 public class Functions
 {
 	public static int[] charArrayToAsciiArray(char[] inputArray)
@@ -24,5 +27,25 @@ public class Functions
 		return returnString;
 	}
 
+	// Code from Lecuture 8 of COMP1007
+	public static void writeOneRow(String inFileName, String stringToWrite)
+	{
+		FileOutputStream fileStrm = null;
+		PrintWriter pw;
+		try
+		{
+			fileStrm = new FileOutputStream(inFileName);
+			pw = new PrintWriter(fileStrm);
+			pw.println(stringToWrite);
+			pw.close();
+		}
+		catch(IOException e)
+		{
+			System.out.println("Error in writing to file: " + e.getMessage());
+		}
+	}
+
 	
+
+
 }
