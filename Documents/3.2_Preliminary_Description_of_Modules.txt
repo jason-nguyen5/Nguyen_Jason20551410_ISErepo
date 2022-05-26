@@ -105,7 +105,7 @@ Below is how my new code will run:
 		>> It'll run code taken from COMP1007 Lecture 7.
 		>> It'll take in a inFileName, and a stringToWrite and write the string into a file.
 	
-	> There will be a method called "a_ConverCases", which will be used for converting strings from lower case and upper case.
+	> There will be a method called "a_ConvertCases", which will be used for converting strings from lower case and upper case.
 		>> This method will run a menu loop that asks the user to choose between converting to uppercase and lowercase.
 		>> Afterwards the program will run a for loop that will get the i'th element of the list, and set that as a temp array.
 		>> This array will then passed into "charArrayToAsciiArray" to which it'll then be set to the temp array again.
