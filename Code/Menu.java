@@ -10,7 +10,8 @@ public class Menu
 		boolean runningMain = true;
 		
 		listOfStrings = inputTypeMenu();
-
+		
+		
 		while(runningMain == true)
 		{
 			System.out.println("\nSelect which function to run:\n");
@@ -55,7 +56,6 @@ public class Menu
 			}
 			
 		}
-		sc.close();
 
 	}
 
@@ -99,7 +99,7 @@ public class Menu
 					System.out.println("Choice was invalid");
 			}
 		}
-		sc.close();
+		
 
 		return returnList;
 	}
@@ -138,7 +138,6 @@ public class Menu
 				System.out.println("That input was invalid");
             }
 		}
-		sc.close();
 		
 		return stringInput;
 	}
@@ -164,7 +163,6 @@ public class Menu
         stringInput = stringInputAndConfirm("Please enter the string you wish to convert: ");
 
 		returnList.add(runStringToCharArray(stringInput));
-		sc.close();
 
 		return returnList;
 	}
@@ -178,7 +176,6 @@ public class Menu
         stringInput = stringInputAndConfirm("Please enter the path to the file, including the extension: ");
 
 		returnList = readFile(stringInput);
-		sc.close();
 
 		return returnList;
 	}

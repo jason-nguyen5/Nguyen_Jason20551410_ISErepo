@@ -5,7 +5,7 @@ public class Functions
 {
 	public static int[] charArrayToAsciiArray(char[] inputArray)
 	{
-		int[] returnArray = new int[inputArray.length - 1];
+		int[] returnArray = new int[inputArray.length];
 
 		for(int i = 0; i < inputArray.length; i++)
 		{
@@ -78,7 +78,6 @@ public class Functions
 
         }
 
-		sc.close();
 		return wantUpper;
 	}
 
@@ -105,9 +104,9 @@ public class Functions
 		int[] returnArray = new int[inputArray.length];
 		for(int i = 0; i < inputArray.length; i++)
 		{
-			if((inputArray[i] < 123) && (inputArray[i] > 96))
+			if((inputArray[i] < 91) && (inputArray[i] > 64))
 			{
-				returnArray[i] = inputArray[i] - 32;
+				returnArray[i] = inputArray[i] + 32;
 			}
 			else
 			{
@@ -141,7 +140,7 @@ public class Functions
 
 			String convertedString = asciiArrayToString(convertedAsciiArray);
 
-			System.out.println("Your original string was: " + originalString);
+			System.out.println("\nYour original string was: " + originalString);
 			System.out.println("Your converted string is: " + convertedString);
 
 			writeOneRow("a_ConvertCases.txt", convertedString);
