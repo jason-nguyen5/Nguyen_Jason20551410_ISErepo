@@ -61,6 +61,15 @@ public class Cat1b
 
     public static void runManualMode()
     {
+        Scanner sc = new Scanner(System.in);
+        boolean runningStringConfirm = true;
+
+        while(runningStringConfirm)
+        {
+            System.out.println("Please enter the string you wish to convert: ");
+            
+        }
+
 
     }
 
