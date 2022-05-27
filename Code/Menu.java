@@ -41,7 +41,7 @@ public class Menu
 					break;
 	
 				case "3":
-					//
+					Functions.c_StringIsValidNumber(listOfStrings);
 					break;
 	
 				case "4":
