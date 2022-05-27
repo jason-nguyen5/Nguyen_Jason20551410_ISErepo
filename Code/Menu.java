@@ -16,11 +16,11 @@ public class Menu
 		{
 			System.out.println("\nSelect which function to run:\n");
 			
-			System.out.println("(1) > Convert given string to upper case or lower case 								(1a)");
-			System.out.println("(2) > Identify whether numeric values are in a given string 							(1b)");
-			System.out.println("(3) > Identify whether a given string is a valid number 								(1c)");
-			System.out.println("(4) > Remove numeric values in a given string then conver to upper or lower case 	(1d)");
-			System.out.println("(5) > Convert time 																	(2c)");
+			System.out.println("(1) > Convert given string to upper case or lower case			(1a)");
+			System.out.println("(2) > Identify whether numeric values are in a given string			(1b)");
+			System.out.println("(3) > Identify whether a given string is a valid number			(1c)");
+			System.out.println("(4) > Remove numeric values in a given string then convert to upper or lower case 	(1d)");
+			System.out.println("(5) > Convert time			(2c)");
 			System.out.println("(0) > Exit");
 			
 			System.out.print("\nPlease enter your choice: ");
@@ -33,11 +33,11 @@ public class Menu
 					runningMain = false;
 					break;
 				case "1":
-					Functions.a_ConvertCases(listOfStrings);;
+					Functions.a_ConvertCases(listOfStrings);
 					break;
 	
 				case "2":
-					//
+					Functions.b_DoNumericsExist(listOfStrings);
 					break;
 	
 				case "3":

@@ -80,6 +80,37 @@ public class Functions
 
 		return wantUpper;
 	}
+	
+	public static void a_ConvertCases(List<char[]> inputCharList)
+	{
+		boolean wantUpper = askWhichCaseMenu();
+		
+		for(int i = 0; i < inputCharList.size(); i++)
+		{
+			char[] charArray = inputCharList.get(i);
+			int[] asciiArray = charArrayToAsciiArray(charArray);
+			int[] convertedAsciiArray;
+			String originalString = asciiArrayToString(asciiArray);
+
+			if(wantUpper == true)
+			{
+				convertedAsciiArray = arrayToUpper(asciiArray);
+
+			}
+			else
+			{
+				convertedAsciiArray = arrayToLower(asciiArray);
+			}
+
+			String convertedString = asciiArrayToString(convertedAsciiArray);
+
+			System.out.println("\nYour original string was: " + originalString);
+			System.out.println("Your converted string is: " + convertedString);
+			System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
+
+			writeOneRow("a_ConvertCases.txt", convertedString);
+		}
+	}
 
 	public static int[] arrayToUpper(int[] inputArray)
 	{
@@ -117,34 +148,46 @@ public class Functions
 		return returnArray;
 	}
 
-	public static void a_ConvertCases(List<char[]> inputCharList)
+	public static void b_DoNumericsExist(List<char[]> inputCharList)
 	{
-		boolean wantUpper = askWhichCaseMenu();
-		
 		for(int i = 0; i < inputCharList.size(); i++)
 		{
+			boolean doNumericsExist = false;
 			char[] charArray = inputCharList.get(i);
 			int[] asciiArray = charArrayToAsciiArray(charArray);
-			int[] convertedAsciiArray;
 			String originalString = asciiArrayToString(asciiArray);
 
-			if(wantUpper == true)
-			{
-				convertedAsciiArray = arrayToUpper(asciiArray);
+			doNumericsExist = checkNumericsExist(asciiArray);
 
+			if(doNumericsExist == true)
+			{
+				System.out.println("\nNumbers do exist in: " + originalString);
+				System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
+				
+				writeOneRow("b_DoNumercsExist.txt", "Numbers do exist");
 			}
 			else
 			{
-				convertedAsciiArray = arrayToLower(asciiArray);
+				System.out.println("\nNumbers do NOT exist in: " + originalString);
+				System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
+				
+				writeOneRow("b_DoNumercsExist.txt", "Numbers do NOT exist");
 			}
-
-			String convertedString = asciiArrayToString(convertedAsciiArray);
-
-			System.out.println("\nYour original string was: " + originalString);
-			System.out.println("Your converted string is: " + convertedString);
-
-			writeOneRow("a_ConvertCases.txt", convertedString);
 		}
+	}
+
+	public static boolean checkNumericsExist(int[] inputArray)
+	{
+		boolean booleanToReturn = false;
+		for(int i = 0; i < inputArray.length; i++)
+		{
+			if((inputArray[i] < 58) && (inputArray[i] > 47))
+			{
+				booleanToReturn = true;
+			}
+		}
+
+		return booleanToReturn;
 	}
 
 
