@@ -306,7 +306,7 @@ public class Functions
 		return returnList;
 	}
 
-	public static void d_RemoveNumericsAnConvertCase(List<char[]> inputCharList)
+	public static void d_RemoveNumericsAndConvertCase(List<char[]> inputCharList)
 	{
 		boolean wantUpper = askWhichCaseMenu();
 

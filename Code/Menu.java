@@ -45,7 +45,7 @@ public class Menu
 					break;
 	
 				case "4":
-					Functions.d_RemoveNumericsAnConvertCase(listOfStrings);
+					Functions.d_RemoveNumericsAndConvertCase(listOfStrings);
 					break;
 	
 				case "5":
