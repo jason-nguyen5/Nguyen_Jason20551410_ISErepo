@@ -232,7 +232,7 @@ public class Functions
 				onlyNumberString = onlyNumberString + (char)inputArray[i];
 				numDigits = numDigits + 1;
 			}
-			
+			/*
 			else if(inputArray[i] == 44)
 			{
 				outputString = outputString + ",";
@@ -246,7 +246,7 @@ public class Functions
 				onlyNumberString = onlyNumberString + (char)inputArray[i];
 				numOfPeriods = numOfPeriods + 1;
 			}
-			
+			*/
 			else
 			{
 				stringIsInvalid = true;
@@ -255,7 +255,7 @@ public class Functions
 
 		}
 
-		
+		/*
 		int numCommasShouldBe = (int)(Math.floor(numDigits/3 - 1));
 		int ifMod = (numDigits%3);
 		if((ifMod != 0) && (numDigits != 3))
@@ -291,7 +291,17 @@ public class Functions
 			returnList.add(" was the valid number: " + outputString );
 			returnList.add(nonNumberString);
 		}
-		
+		*/
+		if(stringIsInvalid == true)
+		{
+			returnList.add(" was invalid. (Commas and Periods are not included)" );
+			returnList.add(nonNumberString);
+		}
+		else
+		{
+			returnList.add(" was the valid number: " + outputString );
+			returnList.add(nonNumberString);
+		}
 
 		return returnList;
 	}
