@@ -109,7 +109,7 @@ public class Functions
 			System.out.println("Your converted string is: " + convertedString);
 			System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
 
-			writeOneRow("a_ConvertCases.txt", convertedString);
+			writeOneRow("a_ConvertCases.txt", "Your converted string is: " + convertedString);
 		}
 	}
 
@@ -165,14 +165,14 @@ public class Functions
 				System.out.println("\nNumbers do exist in: " + originalString);
 				System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
 				
-				writeOneRow("b_DoNumercsExist.txt", "Numbers do exist");
+				writeOneRow("b_DoNumercsExist.txt", "\nNumbers do exist in: " + originalString);
 			}
 			else
 			{
 				System.out.println("\nNumbers do NOT exist in: " + originalString);
 				System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
 				
-				writeOneRow("b_DoNumercsExist.txt", "Numbers do NOT exist");
+				writeOneRow("b_DoNumercsExist.txt", "\nNumbers do NOT exist in: " + originalString);
 			}
 		}
 	}
@@ -306,7 +306,44 @@ public class Functions
 		return returnList;
 	}
 
+	public static void d_RemoveNumericsAnConvertCase(List<char[]> inputCharList)
+	{
+		boolean wantUpper = askWhichCaseMenu();
 
+		for(int i = 0; i < inputCharList.size(); i++)
+		{
+			char[] charArray = inputCharList.get(i);
+			int[] asciiArray = charArrayToAsciiArray(charArray);
+			int[] convertedAsciiArray;
+			String originalString = asciiArrayToString(asciiArray);
+			List<String> returnedList = new ArrayList<String>();
+
+			returnedList = arrayToNumbers(asciiArray);
+
+			String nonNumberString = returnedList.get(1);
+
+			charArray = Menu.runStringToCharArray(nonNumberString);
+			asciiArray = charArrayToAsciiArray(charArray);
+
+			if(wantUpper == true)
+			{
+				convertedAsciiArray = arrayToUpper(asciiArray);
+
+			}
+			else
+			{
+				convertedAsciiArray = arrayToLower(asciiArray);
+			}
+
+			String convertedString = asciiArrayToString(convertedAsciiArray);
+
+			System.out.println("\nYour original string was: " + originalString);
+			System.out.println("Your converted string is: " + convertedString);
+			System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
+
+			writeOneRow("d_RemoveNumericsAnConvertCase.txt", "Your converted string is: " + convertedString);
+		}
+	}
 
 
 }
