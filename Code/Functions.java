@@ -213,13 +213,13 @@ public class Functions
 
 	public static List<String> arrayToNumbers(int[] inputArray)
 	{
-		NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
+		//NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
 		String outputString = "";
 		String nonNumberString = "";
-		String onlyNumberString = "";
+		//String onlyNumberString = "";
 		int numDigits = 0;
-		int numOfCommasInString = 0;
-		int numOfPeriods = 0;
+		//int numOfCommasInString = 0;
+		//int numOfPeriods = 0;
 		boolean stringIsInvalid = false;
 		List<String> returnList = new ArrayList<String>();
 
@@ -229,7 +229,7 @@ public class Functions
 			if((inputArray[i] < 58) && (inputArray[i] > 47))
 			{
 				outputString = outputString + (char)inputArray[i];
-				onlyNumberString = onlyNumberString + (char)inputArray[i];
+				//onlyNumberString = onlyNumberString + (char)inputArray[i];
 				numDigits = numDigits + 1;
 			}
 			/*
