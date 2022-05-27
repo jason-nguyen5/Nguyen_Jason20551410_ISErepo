@@ -82,3 +82,98 @@ Text here
 > - Based on the returned value the function will print out whether or not a numeric value existed within the provided string.
 
 </p>
+
+### 1C. Identifying Whether or Not a Given String is a Valid Number
+
+<p style = "text-align: justify;">
+Text here
+<br>
+
+> - Blockquote list here
+</p>
+
+### 1D. Removing Numbers from a String and Changing the Case
+
+<p style = "text-align: justify;">
+Text here
+<br>
+
+> - Blockquote list here
+</p>
+
+### 2C. Conveting a Number Between Hours, Minutes and Seconds
+
+<p style = "text-align: justify;">
+Text here
+<br>
+
+> - Blockquote list here
+</p>
+
+---
+## Modularity
+----
+
+<p style = "text-align: justify;">
+Description on how to run your production code with correct commands.
+Discussion on how different modularity concepts are applied in your code, review checklist you have created, results of conducting the review using the review checklist with explanation on your results and how you have addressed any issues.
+You can use screen shots to support your answer in this part.
+<br>
+</p>
+
+---
+## Black-Box Test Cases
+----
+
+<p style = "text-align: justify;">
+All test cases you have designed in the part 4 of this assessment, assumptions you made if any, and brief explanation why you have done the test design in the way you have done.
+<br>
+</p>
+
+---
+## White-Box Test Cases
+----
+
+<p style = "text-align: justify;">
+All test cases you have designed as answer for the part 5 of this assessment, assumptions you made if any, brief explanation why you have done the test design in the way you have done
+<br>
+</p>
+
+---
+## Test Implementation and Testing
+----
+
+<p style = "text-align: justify;">
+Description of how to run your test code with correct commands.
+Results of test execution with test success and failures with short discussion of results from part 6 of this assessment, discussion on whether you have attempted to improve your code and new results, if any.
+You can use screen shots to support your answer in this part.
+You are supposed to produce a table which shows following information to help you and the marker to check the work you have done. ( EP: Equivalence partitioning, BVA: Boundary value Analysis, BB : Black-box, WB: White-box)
+<br>
+</p>
+
+---
+## Version Control
+----
+
+<p style = "text-align: justify;">
+Log of the use of your version control system, any explanation /discussion on version control. (refer part 1 of the detailed description)
+<br>
+</p>
+
+---
+## Ethics
+----
+
+<p style = "text-align: justify;">
+Answer to Q7
+<br>
+</p>
+
+---
+## Discussion
+----
+
+<p style = "text-align: justify;">
+Reflection of your own work, ways to improve your work and any other thing you wish to present.
+<br>
+</p>
