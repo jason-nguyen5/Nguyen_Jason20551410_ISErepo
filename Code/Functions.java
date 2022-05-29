@@ -188,7 +188,7 @@ public class Functions
 		boolean booleanToReturn = false;
 		for(int i = 0; i < inputArray.length; i++)
 		{
-			if((inputArray[i] < 58) && (inputArray[i] > 47))
+			if((inputArray[i] <= 57) && (inputArray[i] >= 48))
 			{
 				booleanToReturn = true;
 			}

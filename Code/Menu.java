@@ -12,7 +12,7 @@ public class Menu
 		listOfStrings = inputTypeMenu();
 		
 		
-		while(runningMain == true)
+		while((runningMain == true) && (listOfStrings.size() != 0))
 		{
 			System.out.println("\nSelect which function to run:\n");
 			

@@ -29,13 +29,13 @@ public class TestFunctions
         while(runningWhichFunction == true)
 		{
 			System.out.println("\nWhich function do you wish to test??");
-			System.out.println(" > (1) askWhichCaseMenu");
-			System.out.println(" > (2) arrayToUpper");
-			System.out.println(" > (3) arrayToLower");
-			System.out.println(" > (4) checkNumericsExist");
-			System.out.println(" > (5) arrayToNumbers");
-			System.out.println(" > (6) whichTimeConversion");
-			System.out.println(" > (7) getFromUnit");
+			//System.out.println(" > (1) askWhichCaseMenu");
+			System.out.println(" > (1) arrayToUpper");
+			System.out.println(" > (2) arrayToLower");
+			System.out.println(" > (3) checkNumericsExist");
+			System.out.println(" > (4) arrayToNumbers");
+			//System.out.println(" > (6) whichTimeConversion");
+			System.out.println(" > (5) getFromUnit");
 			System.out.println(" > (0) Exit");
 
 			System.out.print("\nPlease enter your choice: ");
@@ -47,25 +47,25 @@ public class TestFunctions
 				case "0":
 					runningWhichFunction = false;
 					break;
-                case "1":
-                    test_askWhichCaseMenu();
-					break;
-				case "2":
+                //case "1":
+                  //  test_askWhichCaseMenu();
+					//break;
+				case "1":
 					test_arrayToUpper();
 					break;
-                case "3":
+                case "2":
                     test_arrayToLower();
 					break;
-				case "4":
+				case "3":
 					test_checkNumericsExist();
 					break;
-                case "5":
+                case "4":
                     test_arrayToNumbers();
 					break;
-				case "6":
-					test_whichTimeConversion();
-					break;
-                case "7":
+				//case "6":
+				//	test_whichTimeConversion();
+				//	break;
+                case "5":
                     test_getFromUnit();
 					break;
 				default:
@@ -131,22 +131,89 @@ public class TestFunctions
     
     public static void test_checkNumericsExist()
     {
+        int[] inputArray = {47, 48};
+        boolean output = true;
+        assert output == Functions.checkNumericsExist(inputArray) : "47, 48 Boundary";
+
+        inputArray[0] = 47;
+        inputArray[1] = 47;
+        output = false;
+        System.out.println(Functions.checkNumericsExist(inputArray));
+        assert output == Functions.checkNumericsExist(inputArray) : "47 Boundary";
+
+        inputArray[0] = 48;
+        inputArray[1] = 48;
+        output = true;
+        assert output == Functions.checkNumericsExist(inputArray) : "48 Boundary";
+        
+        inputArray[0] = 57;
+        inputArray[1] = 58;
+        output = true;
+        assert output == Functions.checkNumericsExist(inputArray) : "57, 58 Boundary";
+
+        inputArray[0] = 57;
+        inputArray[1] = 57;
+        output = true;
+        assert output == Functions.checkNumericsExist(inputArray) : "57 Boundary";
+
+        inputArray[0] = 58;
+        inputArray[1] = 58;
+        output = false;
+        assert output == Functions.checkNumericsExist(inputArray) : "58 Boundary";
 
     }
     
     public static void test_arrayToNumbers()
     {
+        int[] inputArray = {47, 48};
+        String output = " was invalid. (Commas and Periods are not included)";
+        assert output.equals((Functions.arrayToNumbers(inputArray).get(0))) : "47, 48 Boundary";
+        
+        inputArray[0] = 57;
+        inputArray[1] = 58;
+        output = " was invalid. (Commas and Periods are not included)";
+        assert output.equals((Functions.arrayToNumbers(inputArray).get(0))) : "57, 58 Boundary";
 
+        inputArray = new int[1];
+        inputArray[0] = 47;
+        output = " was invalid. (Commas and Periods are not included)";
+        assert output.equals((Functions.arrayToNumbers(inputArray).get(0))) : "47 Boundary";
+
+        inputArray = new int[1];
+        inputArray[0] = 48;
+        System.out.println((Functions.arrayToNumbers(inputArray).get(0)));
+        output = " was the valid number: 0";
+        assert output.equals((Functions.arrayToNumbers(inputArray).get(0))) : "48 Boundary";
+
+        inputArray = new int[1];
+        inputArray[0] = 57;
+        output = " was the valid number: 9";
+        assert output.equals((Functions.arrayToNumbers(inputArray).get(0))) : "57 Boundary";
+
+        inputArray = new int[1];
+        inputArray[0] = 58;
+        output = " was invalid. (Commas and Periods are not included)";
+        assert output.equals((Functions.arrayToNumbers(inputArray).get(0))) : "58 Boundary";
     }
     
     public static void test_whichTimeConversion()
     {
-
+        //
     }
     
     public static void test_getFromUnit()
     {
+        char inputChar = 'h';
+        String output = " Hours";
+        assert output.equals((Functions.getFromUnit(inputChar)));
 
+        inputChar = 'm';
+        output = " Minutes";
+        assert output.equals((Functions.getFromUnit(inputChar)));
+
+        inputChar = 's';
+        output = " Seconds";
+        assert output.equals((Functions.getFromUnit(inputChar)));
     }
 
 
