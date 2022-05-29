@@ -262,6 +262,11 @@ public class Functions
 
 		}
 
+		//System.out.print("OUTPUT STRING: " + outputString);
+		if(outputString.equals("") == true)
+		{
+			outputString = "0";
+		}
 		/*
 		int numCommasShouldBe = (int)(Math.floor(numDigits/3 - 1));
 		int ifMod = (numDigits%3);
@@ -365,16 +370,30 @@ public class Functions
 			char[] charArray = inputCharList.get(i);
 			int[] asciiArray = charArrayToAsciiArray(charArray);
 			int timeNumber = Integer.parseInt(arrayToNumbers(asciiArray).get(2));
-
+			
 			double convertedHours = 0;
 			double convertedMintues = 0;
 			double convertedSeconds = 0;
+			
+			timeNumber = 1410;
+
+			//convertFrom = 'h';
+			//convertFrom = 'm';
+			//convertFrom = 's';
+			
+			//convertTo = 'h';
+			//convertTo = 'm';
+			//convertTo = 's';
 
 			switch(convertFrom)
 			{
 				case 'h':
 					if(convertTo == 'm') {
 						convertedMintues = timeNumber * 60;
+					}
+					else if(convertTo == convertFrom)
+					{
+						convertedHours = timeNumber;
 					}
 					else {
 						convertedSeconds = timeNumber * 60 * 60;
@@ -386,18 +405,30 @@ public class Functions
 						convertedHours = Math.floor((double)timeNumber / 60);
 						convertedMintues = timeNumber % 60;
 					}
+					else if(convertTo == convertFrom)
+					{
+						convertedMintues = timeNumber;
+					}
 					else {
 						convertedSeconds = timeNumber * 60;
 					}
 					break;
 				
 				case 's':
-					convertedMintues = Math.floor((double)timeNumber / 60);
-					convertedSeconds = timeNumber % 60;
-
 					if(convertTo == 'h') {
+						convertedMintues = Math.floor((double)timeNumber / 60);
+						convertedSeconds = timeNumber % 60;
 						convertedHours = Math.floor(convertedMintues / 60);
 						convertedMintues = convertedMintues % 60;
+					}
+					else if(convertTo == convertFrom)
+					{
+						convertedSeconds = timeNumber;
+					}
+					else
+					{
+						convertedMintues = Math.floor((double)timeNumber / 60);
+						convertedSeconds = timeNumber % 60;
 					}
 					break;
 			}

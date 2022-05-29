@@ -10,7 +10,10 @@ public class Menu
 		boolean runningMain = true;
 		
 		listOfStrings = inputTypeMenu();
-		
+		//listOfStrings.set(0, new char[1])); // 1 Line, Manual Representation
+		//listOfStrings.add(new char[5]); // 5 character, 3 Lines, Read Representation
+		//listOfStrings.add(new char[6]); // 6 character, 3 Lines, Read Representation
+		//listOfStrings.add(new char[2]); // 2 character, 3 Lines, Read Representation
 		
 		while((runningMain == true) && (listOfStrings.size() != 0))
 		{
@@ -30,28 +33,35 @@ public class Menu
 			switch(input)
 			{
 				case "0":
+					//System.out.println("0 was choosen");
 					runningMain = false;
 					break;
 				case "1":
+					//System.out.println("1 was choosen");
 					Functions.a_ConvertCases(listOfStrings);
 					break;
 	
 				case "2":
+					//System.out.println("2 was choosen");
 					Functions.b_DoNumericsExist(listOfStrings);
 					break;
 	
 				case "3":
+					//System.out.println("3 was choosen");
 					Functions.c_StringIsValidNumber(listOfStrings);
 					break;
 	
 				case "4":
+					//System.out.println("4 was choosen");
 					Functions.d_RemoveNumericsAndConvertCase(listOfStrings);
 					break;
 	
 				case "5":
+					//System.out.println("5 was choosen");
 					Functions.twoC_TimeConversion(listOfStrings);
 					break;
 				default:
+					//System.out.println("Default Reached");
 					System.out.println("Choice was invalid");
 			}
 			

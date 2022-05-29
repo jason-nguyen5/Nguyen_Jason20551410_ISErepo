@@ -12,6 +12,7 @@
 
 <div style="page-break-after: always;"></div>
 
+
 ---
 ## **Introduciton**
 ---
@@ -43,6 +44,8 @@ As for testing,
 
 <div style="page-break-after: always;"></div>
 
+<br>
+
 ---
 ## Module Description
 ---
@@ -50,7 +53,10 @@ As for testing,
 My program currently has five main functions. All of <b>Category 1 and Category 2's (C)</b> conversions. However, there more methods contained in the program exist to aid in the opperation of the system. They were designed to enable the repetition of code without worrying about data redundacy. Each of the main modules was heavily described in the the Preliminary Description documents, however smaller functions haven't been.
 </p>
 
+<br>
+
 ### 1A. Converting a String to Uppercase or Lowercase
+---
 
 <p style = "text-align: justify;">
 This function is intended to be used to take a string in and then convert the letter to uppercase or lowercase based on the user's choice. The program should ignore all non-letter characters and only perform the capitilization on the letters of the English alphabet. It doesn't support special letters with tones, as programming for each case would cause the program to contain a lot of if-else or cases, which would hinder the readability of the program. A rough description of how the program works is quoted and adjusted from the Preliminary Description: 
@@ -70,7 +76,10 @@ This function is intended to be used to take a string in and then convert the le
 
 </p>
 
+<br>
+
 ### 1B. Identifying Whether or Not a String Contains Any Numbers
+---
 
 <p style = "text-align: justify;">
 This function is inteded to be used in order to take in a string, and then check if there are any numbers within the string. After checking each character in the string th eprogram will display a message of whether there was or wasn't a number within the string. Afterward it should write the result out to a file. It'll accomplish this by checking the ascii value of the char against the range of ascii values between 48 & 57 inclusive, as those are the ascii values of the number 0-9. A runthrough of how the program is quote and adjusted form the Preliminary Description below:
@@ -88,7 +97,10 @@ This function is inteded to be used in order to take in a string, and then check
 
 </p>
 
+<br>
+
 ### 1C. Identifying Whether or Not a Given String is a Valid Number
+---
 
 <p style = "text-align: justify;">
 The purpose of this function is to identify is the string that is give is a valid number. It checks is there or only numbers contained within a string that is provided, otherwise it'll tell the user that the string proposed was no valid. It does this by checking if the passed ascii values array has any values which are not within the range of 48 to 57 represent the numbers 0-9. If there are any outside this range it'll return a string state that the initial string provided was invalid. A rundown of the code is taken from the preliminary description and shown below:
@@ -110,7 +122,10 @@ The purpose of this function is to identify is the string that is give is a vali
 >   - Lastly, the program will print out the result and save it to a text file.
 </p>
 
+<br>
+
 ### 1D. Removing Numbers from a String and Changing the Case
+---
 
 <p style = "text-align: justify;">
 This function is designed to take in a string and then remove any numbers that are in it and then change the capitalization of the string through user input. First it'll take in the string and convert it to an ascii array, and then check if there are any ascii values that represent numbers. If so it'll remove those values and then ask the user if they'd like to go to lowercase of upppercase. This function reuses code from 1A and 1C, and a breakdown of the code is taken from the Preliminary Description and shown below:
@@ -125,7 +140,10 @@ This function is designed to take in a string and then remove any numbers that a
 > - Finally it is printout out and then saved into a text file.
 </p>
 
+<br>
+
 ### 2C. Conveting a Number Between Hours, Minutes and Seconds
+---
 
 <p style = "text-align: justify;">
 This code is used to convert a given amount of time to a different unit of time. It can convert seconds, to minutes or hours, vice versa in any combination. You could go directly from hours to seconds, rather than hours to minutes. Doing it this way made it a lot easier without having to think about too much extra. It works by taking in the the units the user in coming from and then which units they'd like to convert to. An overview of the code was taken from the Preliminary Decription, adjusted and displayed below:
@@ -144,6 +162,8 @@ This code is used to convert a given amount of time to a different unit of time.
 > - And then printed to the terminal and saved in a text file.
 > 
 </p>
+
+<br>
 
 ---
 ## Modularity
@@ -181,6 +201,8 @@ Cohesion and redundacy have been represent through the menu codes. Most of the m
   <li>Are variables created, and assigned in the right order?</li>
 </ol>
 
+<br>
+
 ---
 ## Black-Box Test Cases
 ----
@@ -192,7 +214,10 @@ Some of the code couldn't be tested as I didn't know any way to test it without 
 All test cases have had their test functionality be put into a file called TestFunctions.java, where there is a menu to choose exactly which function is tested. Each function is tested using the assert function. Futhermore, it is assumed that the inputs will be done using a keyboard and that they are correct to avoid crashing the testing code. JUnit was not used as I could not get it work during my workshop, and did not have enough time to spend attempting to get JUnit to work. This will be discussed later in the Ethics section.
 </p>
 
+<br>
+
 ### 1A. Converting a String to Uppercase or Lowercase
+---
 
 <p style = "text-align: justify;">
 Boundary Value Testing was chosen to test this function. It was chosen as the input is an integer from an integer array. The code compares current element of the array against a range of integers that represent the capitalization of each character in a string. Testing these boundaries can verify that the set ranges are working properly and perform the right function based on the calculation being required. However, the code still needs to take in the user input before performing the conversion, as it needs to ask if the user is converting to uppercase or lowercase. There is no need to test these values, as the program will automatically let the user know if the input was invalid. 
@@ -200,6 +225,7 @@ Boundary Value Testing was chosen to test this function. It was chosen as the in
 
 <p style = "text-align: justify;">
 Since we are only testing the raw, arrayToUpper and arrayToLower, we can use an array with the numbers, -1 & 0, to check the valid ascii boundary, 64 & 65 for the boundary between uppercase "A" and then 90 & 91 for the boundary between uppercase "Z" for arrayToLower. Values between 65 and 90 inclusive, should be registered as valid and change to their lowercase counterpart, while any other values should remain the exact same. Similarly, for arrayToUpper, the values -1 & 0, for ascii range, 96 & 97 for lowercase "a", and 122 & 123 for lowercase "z". Once more, only those within the lowercase bounds should change and nothing else should become different.
+</p>
 
 <br>
 
@@ -231,9 +257,11 @@ Since we are only testing the raw, arrayToUpper and arrayToLower, we can use an 
 | "Jason NGUYEN" + l | "jason nguyen" |
 | "Doctor Strange in the Multiverse of Madness" + u | "DOCTOR STRANGE IN THE MULTIVERSE OF MADNESS" |
 | "Doctor Strange in the Multiverse of Madness" + u | "doctor strange in the multiverse of madness" |
-</p>
+
+<br>
 
 ### 1B. Identifying Whether or Not a String Contains Any Numbers
+---
 
 <p style = "text-align: justify;">
 Boundary Value Analysis was chosen to test this function. In this function, the main function called "b_DoNumericsExist" does not return any value, instead only the method call "checkNumericsExist" contains a boolean return value. Therefore, I have choosen to test this module for the functionality testing of 1B. BVA was chosen as the input is an integer array that is from a range of varibles. Since the output can only be valid or invalid, boundary value testing was chosen. The selction was because the integers between 48 to 57 inclusive represent the numbers 0 to 9 meaning that anything within this range is valid and everything outside is invalid. 
@@ -262,7 +290,10 @@ Boundary Value Analysis was chosen to test this function. In this function, the 
 | "Doctor Strange in the Multiverse of Madness" | "Numbers do NOT exist" |
 </p>
 
+<br>
+
 ### 1C. Identifying Whether or Not a Given String is a Valid Number
+---
 
 <p style = "text-align: justify;">
 Similarly to 1B, 1C will also be using bounday value analysis. The main function of 1C is called "c_StringIsValidNumber" however it doesn't return any values, instead it takes the returned value of "arrayToNumbers" and uses that, hence in this test case, we will be testing for "arrayToNumbers". Since this function checks the boundaries between 47 & 48 to  57 & 58, and sets the validity only when the integer is out of the range, we can use BVA to test the output. 
@@ -294,7 +325,10 @@ Similarly to 1B, 1C will also be using bounday value analysis. The main function
 | "Doctor Strange in the Multiverse of Madness" | "Invalid" |
 </p>
 
+<br>
+
 ### 1D. Removing Numbers from a String and Changing the Case
+---
 
 <p style = "text-align: justify;">
 For 1D, "d_RemoveNumericsAndConvertCase" does not return any values, but instead prints it directly to the terminal. However it does use the functions of "arrayToUpper" and "arrayToLower", and "arrayToNumbers", from 1A and 1C. Therefore, the only tests that can be run are those for the aforementioned functions, which have been performed in prior test cases. Manual testing and entering inputs can still be performed, however code for such cannot be provided as I don't know how to program inputs without hardcoding and testing them.If manually entering the data was testable, it'd fall under equivalence partioning as we are just testing a range of two outcomes, not many boundaries like before.
@@ -351,38 +385,33 @@ For 1D, "d_RemoveNumericsAndConvertCase" does not return any values, but instead
 | "Doctor Strange in the Multiverse of Madness" + u | "doctor strange in the multiverse of madness" |
 </p>
 
+<br>
+
 ### 2C. Conveting a Number Between Hours, Minutes and Seconds
+---
 
 <p style = "text-align: justify;">
-For 2C, converting between time units, I have choosen to go with equivalence partioning as we are test for validity of three values. We are only testing "whichTimeConversion" because the main function  "d_RemoveNumericsAndConvertCase" does not return any values. By testing certain values we can see if the program recognizes the three available inputs.
+For 2C, converting between time units, I have choosen to go with equivalence partioning as we are test for validity of three values. We aren't able to test "whichTimeConversion" because it, alongwith the main function "d_RemoveNumericsAndConvertCase" do not return any values. By testing certain values we can see if the program recognizes the inputs, however since the program requires an input, I am unable to test the code without any hardcoding.
+
+However, "getFromUnit" can still be tested ask it takes in a char and outputs a string. This can easily be done using an assertion.
 
 <br>
 
-| whichTimeConversion |  Test Data  | Expected Result |
+| getFromUnit |  Test Data  | Expected Result |
 | :---:    |    :----:    |    :---:     |
-| Hours    | 'h'      | 'h'  |
-| Hours    | 'H'      | 'h'  |
-| Minutes  | 'm'      | 'm'  |
-| Minutes  | 'M'      | 'm'  |
-| Seconds  | 's'      | 's'  |
-| Seconds  | 'S'      | 's'  |
+| Hours    | 'h'      | "Hours"    |
+| Minutes  | 'm'      | "Minutes"  |
+| Seconds  | 's'      | "Seconds"  |
 
 <br>
 
 | Input | Expected Output |
 | :--- | :--- |
-| "1410" + h + h | "1410 Hours, 0 Minutes, 0 Seconds" |
-| "1410" + h + m | "84600 Hours, 0 Minutes, 0 Seconds" |
-| "1410" + h + s | "5076000 Hours, 0 Minutes, 0 Seconds" |
-| "1410" + m + h | "23 Hours, 30 Minutes, 0 Seconds" |
-| "1410" + m + m | "0 Hours, 1410 Minutes, 0 Seconds" |
-| "1410" + m + s | "0 Hours, 0 Minutes, 84600 Seconds" |
-| "1410" + s + h | "0 Hours, 23 Minutes, 30 Seconds" |
-| "1410" + s + m | "0 Hours, 23 Minutes, 30 Seconds" |
-| "1410" + s + s | "0 Hours, 0 Minutes, 1410 Seconds" |
-| All other test strings | "0 Hours, 0 Minutes, 0 Seconds" | 
+| All test strings | Invalid, infinite loop waiting for any of the correct chars | 
 
 </p>
+
+<br>
 
 ---
 ## White-Box Test Cases
@@ -395,12 +424,28 @@ The two cases in which I choosen to perform white-box testing is for my Main Men
 </p>
 
 <p style = "text-align: justify;">
-The main menu regularly takes in inputs, therefore I don't know how to write an additional file to change these inputs, instead I have choosen to hardcode certain values trying to test the program. These values can still be found within the code, except they are just commented out. By hardcoding the values, I can identify which exact variable is causing issues in the menu.
+The main menu regularly takes in inputs, therefore I don't know how to write an additional file to change these inputs, instead I have choosen to hardcode certain values trying to test the program. These values can still be found within the code, except they are just commented out. By hardcoding the values, I can identify which exact variable is causing issues in the menu. For the menu I intend to perform both branch and path testing as there are many yet few paths the code can take. Furthermore, there are two branching locations, 1st at the input type menu, and then at the function type menu. Quickly in my head, are 10 possible paths to take in the main of the menu file. 5 paths for each conversion type, along with 2 input types: manually and from a file. Hardcoding the string list for the listOfStrings variable is simple, however testing each function that can be performed will be strenuous, therefore, I will just put print statements to know that the switch case's case were correct. 
 </p>
 
 <p style = "text-align: justify;">
-As for 2C, the Time Conversions. I have also taken a hardcoding approach, however I have also added the ability to test the "whichTimeConversion" and "getFromUnit" using assert functions. These assert functions have been placed within a seperate file called
+As for 2C, the Time Conversions. I have also taken a hardcoding approach, however I have also added the ability to test the "whichTimeConversion" and "getFromUnit" using assert functions. By testing these functions I can confirm the inputs and outputs of the "twoC_TimeConversion" function, as in doing so, I can know precisely what information is getting assigned to each variable. Furthmore, hardcoding variables can been seen commented out in the production code as it would be too troublesome to extract the function into it's separate file. Extracting it to another file is possible, however it adds an additional degree of error, as I coudld forget to update the original code, or perhaps end up changing too much of it to the point where it no longer works. Therefore, the hardcoding will remain within the production code, just commented out to avoid running it.
 </p>
+
+| Input | Expected Output |
+| :--- | :--- |
+| "1410" + h + h | "1410 Hours, 0 Minutes, 0 Seconds" |
+| "1410" + h + m | "0 Hours, 84600 Minutes, 0 Seconds" |
+| "1410" + h + s | "0 Hours, 0 Minutes, 5076000 Seconds" |
+| "1410" + m + h | "23 Hours, 30 Minutes, 0 Seconds" |
+| "1410" + m + m | "0 Hours, 1410 Minutes, 0 Seconds" |
+| "1410" + m + s | "0 Hours, 0 Minutes, 84600 Seconds" |
+| "1410" + s + h | "0 Hours, 23 Minutes, 30 Seconds" |
+| "1410" + s + m | "0 Hours, 23 Minutes, 30 Seconds" |
+| "1410" + s + s | "0 Hours, 0 Minutes, 1410 Seconds" |
+| All other test strings | "0 Hours, 0 Minutes, 0 Seconds" | 
+
+
+<br>
 
 ---
 ## Test Implementation and Testing
@@ -411,8 +456,81 @@ Description of how to run your test code with correct commands.
 Results of test execution with test success and failures with short discussion of results from part 6 of this assessment, discussion on whether you have attempted to improve your code and new results, if any.
 You can use screen shots to support your answer in this part.
 You are supposed to produce a table which shows following information to help you and the marker to check the work you have done. ( EP: Equivalence partitioning, BVA: Boundary value Analysis, BB : Black-box, WB: White-box)
-<br>
+
+To the TestFunctions.java file the user can type `javac TestFunctions.java` to build the file and then `java -ea TestFunctions` to run the code with assertions on. If the user doesn't add the `-ea` the code will run but will not print out any assetion errors as they haven't been enabled. When running the code, the user is prompted with all the options they can choose and the program will loop through itself until the user chooses to exit or there happens to be an assertion error.
 </p>
+
+<br>
+
+### arrayToUpper & arrayToLower
+---
+<p style = "text-align: justify;">
+During the testing of arrayToUpper and arrayToLower, there were no issues with the BVA testing code.
+</p>
+
+<br>
+
+### checkNumericsExist
+---
+<p style = "text-align: justify;">
+During the testing of checkNumericsExist, there was an assertion error at the 47, 48 boundary. The error was happening on the 47 solo boundary, where the output should have been false but it kept providing an error. So I printed out the output to see that it was true. Going back into the Functions file, I had realized that I had used "<" and ">" rather than "<=" and ">=" symbols. However fixing these still gave an error. Afterwards I had realized that I was setting inputArray elements 0 and 1 at the beginning, but at the boundary test I was only setting the 0th element and not the 1st. Therefore it was keeping this value from before. The test code was fixed and the output was to be expected, with no further errors.
+
+Before: `inputArray[0] = 47;`
+
+After:  `inputArray[0] = 47; inputArray[1] = 47;`
+</p>
+
+<br>
+
+### arrayToNumbers
+---
+<p style = "text-align: justify;">
+During the testing of arrayToNumbers, there was an assertion error. This was not from the production code but rather the test code. Since an array of length 2 was initialized, the retaining values that weren't changed would still be counted by the program and loop through during the check. To fix this, I put the arrays of length 2 at the top, then underneath just set the input array to a new array with the length of only 1 to check if the output was correct. If anytihng, this demonstrates that the code is able to pickup all values of the array and will perform the calculations without skipping a beat.
+</p>
+
+<br>
+
+### getFromUnit
+---
+<p style = "text-align: justify;">
+During the testing of getFromUnit, there were no issues with the EP testing code.
+</p>
+
+<br>
+
+### main
+---
+<p style = "text-align: justify;">
+During the testing of Menu.java's main, there were no errors. Hardcoding has been commented out.
+</p>
+
+<br>
+
+### twoC_TimeConversion
+---
+<p style = "text-align: justify;">
+During the testing of there were errors in the calculations. If the input string contained no numbers, the array would return null and could not be parsed as in int. Therefore, to alleviate this issue, I add a quick check before returning the list in "arrayToNumbers", if the string was empty it'd set the string to "0". 
+<br>
+<code> if(outputString.equals("") == true)</code>
+<br>
+<code>{ outputString = "0" }</code>
+</p>
+
+<p style = "text-align: justify;">
+Another issue that was encountered was when the same unit for convertTo and convertFrom were selected. This is because within the calculations, it would just check if convertTo was one of the 3 possible units, and then an else statement was used to run for the remaining 2. This was an oversight as I did not expect the From and To variable to ever be the same. To fix this I simply added an <code>else if</code> statement that was the to check for the char of the same unit. After changing this the code worked as expect, and all the hardcoding commented out.
+</p>
+
+<br>
+
+| Module Name | BB EP Design | BB BVA Design | WB Design | EP Code | BVA Code | WB Testing | 
+| :---        | :---         | :---          | :---      | :---    | :---     | :---       |
+| arrayToUpper        | None | Done          | None      | None    | Done     | None       |
+| arrayToLower        | None | Done          | None      | None    | Done     | None       |
+| checkNumericsExist  | None | Done          | None      | None    | Done     | None       |
+| arrayToNumbers      | None | Done          | None      | None    | Done     | None       |
+| getFromUnit         | Done | None          | None      | Done    | None     | None       |
+| main                | None | None          | Done      | None    | None     | Done       |
+| twoC_TimeConversion | None | None          | Done      | None    | None     | Done       |
 
 ---
 ## Version Control
