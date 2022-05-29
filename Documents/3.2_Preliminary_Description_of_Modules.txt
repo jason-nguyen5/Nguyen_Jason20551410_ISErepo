@@ -161,9 +161,9 @@ Below is how my new code will run:
 			>>> This second unit is then set to element 1 of returnArray.
 			>>> returnArray is then returned
 		>> Afterwards, element 0 and 1 are set to convertFrom and convertTo respectively.
-		>> Then the input value will be converted to a char array with runStringToChar from Menu
-		>> Then char array to ascii array using charArrayToAscii
-		>> Then passed to arrayToNumbers, and setting element 2 of the returned list to timeNumber
+		>> The charArray will be set to the i'th value in the list.
+		>> Then char array to ascii array using charArrayToAscii.
+		>> Then passed to arrayToNumbers, and setting element 2 of the returned list to timeNumber.
 		>> Afterwards, there will run a switch case that'll check the convertFrom value against 'h', 'm', 's'.
 		>> Afterwards, in each case it'll run an if statement that'll check if the convertTo equals 'h', 'm', 's' and perform the multiplication.
 		>> During the multiplication, it'll as get the module values and set the respective units to the remainder.

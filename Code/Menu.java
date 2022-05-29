@@ -49,7 +49,7 @@ public class Menu
 					break;
 	
 				case "5":
-					//
+					Functions.twoC_TimeConversion(listOfStrings);
 					break;
 				default:
 					System.out.println("Choice was invalid");

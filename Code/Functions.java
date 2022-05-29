@@ -217,7 +217,7 @@ public class Functions
 		String outputString = "";
 		String nonNumberString = "";
 		//String onlyNumberString = "";
-		int numDigits = 0;
+		//int numDigits = 0;
 		//int numOfCommasInString = 0;
 		//int numOfPeriods = 0;
 		boolean stringIsInvalid = false;
@@ -230,7 +230,7 @@ public class Functions
 			{
 				outputString = outputString + (char)inputArray[i];
 				//onlyNumberString = onlyNumberString + (char)inputArray[i];
-				numDigits = numDigits + 1;
+				//numDigits = numDigits + 1;
 			}
 			/*
 			else if(inputArray[i] == 44)
@@ -296,11 +296,13 @@ public class Functions
 		{
 			returnList.add(" was invalid. (Commas and Periods are not included)" );
 			returnList.add(nonNumberString);
+			returnList.add(outputString);
 		}
 		else
 		{
 			returnList.add(" was the valid number: " + outputString );
 			returnList.add(nonNumberString);
+			returnList.add(outputString);
 		}
 
 		return returnList;
@@ -345,5 +347,129 @@ public class Functions
 		}
 	}
 
+	public static void twoC_TimeConversion(List<char[]> inputCharList)
+	{
+		char convertFrom = whichTimeConversion("from");
+		char convertTo = whichTimeConversion("to");
+		
+
+		for(int i = 0; i < inputCharList.size(); i++)
+		{
+			char[] charArray = inputCharList.get(i);
+			int[] asciiArray = charArrayToAsciiArray(charArray);
+			int timeNumber = Integer.parseInt(arrayToNumbers(asciiArray).get(2));
+
+			double convertedHours = 0;
+			double convertedMintues = 0;
+			double convertedSeconds = 0;
+
+			switch(convertFrom)
+			{
+				case 'h':
+					if(convertTo == 'm') {
+						convertedMintues = timeNumber * 60;
+					}
+					else {
+						convertedSeconds = timeNumber * 60 * 60;
+					}
+					break;
+				
+				case 'm':
+					if(convertTo == 'h') {
+						convertedHours = Math.floor((double)timeNumber / 60);
+						convertedMintues = timeNumber % 60;
+					}
+					else {
+						convertedSeconds = timeNumber * 60;
+					}
+					break;
+				
+				case 's':
+					convertedMintues = Math.floor((double)timeNumber / 60);
+					convertedSeconds = timeNumber % 60;
+
+					if(convertTo == 'h') {
+						convertedHours = Math.floor(convertedMintues / 60);
+						convertedMintues = convertedMintues % 60;
+					}
+					break;
+			}
+
+			String fromUnit = getFromUnit(convertFrom);
+			String stringToPrint = "Your converted time is: " + (int)convertedHours + " Hours, " + (int)convertedMintues + " Minutes and " + (int)convertedSeconds + " Seconds";
+
+			System.out.println("\nYour original time was: " + timeNumber + fromUnit);
+			System.out.println(stringToPrint);
+			System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
+
+			writeOneRow("d_RemoveNumericsAnConvertCase.txt", stringToPrint);
+		}
+	}
+
+	public static char whichTimeConversion(String choiceIndex)
+	{
+		char returnChar = '0';
+		Scanner sc = new Scanner(System.in);
+		String input = "";
+		boolean runningConvertLoop = true;
+
+		
+
+		while(runningConvertLoop == true)
+		{
+			System.out.println("Which unit would you like to convert " + choiceIndex + "?");
+			System.out.println(" > (H)ours");
+			System.out.println(" > (M)inutes");
+			System.out.println(" > (S)econds");
+
+			System.out.print("\nPlease make your selection: ");
+			input = sc.next().toLowerCase();
+
+			switch(input)
+			{
+				case "h":
+					returnChar = 'h';
+					runningConvertLoop = false;
+					break;
+
+				case "m":
+					returnChar = 'm';
+					runningConvertLoop = false;
+					break;
+				
+				case "s":
+					returnChar = 's';
+					runningConvertLoop = false;
+					break;
+				
+				default:
+					System.out.println("The input was invalid");
+			}
+		}
+
+		
+		return returnChar;
+	}
+
+	public static String getFromUnit(char convertFrom)
+	{
+		String returnString = "";
+
+		if(convertFrom == 'h')
+		{
+			returnString = " Hours";
+		}
+		else if(convertFrom == 'm')
+		{
+			returnString = " Mintues";
+		}
+		else
+		{
+			returnString = " Seconds";
+		}
+
+
+		return returnString;
+	}
 
 }
