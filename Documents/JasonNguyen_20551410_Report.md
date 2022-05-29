@@ -177,7 +177,7 @@ Cohesion and redundacy have been represent through the menu codes. Most of the m
   <li>Can a variable's purpose be quick and easily identified by just the name?</li>
   <li>Are there null values being used?</li>
   <li>Are arrays and variables atleast set to empty rather than null?</li>
-  <li>Are there any global variables?</li>
+  <li>Are there any excess global variables?</li>
   <li>Are if statements less than 3 if's long?</li>
   <li>Are lines of code larger than the screen and need to go to next line?</li>
   <li>Are comments on seperate lines?</li>
