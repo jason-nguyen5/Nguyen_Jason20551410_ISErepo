@@ -41,6 +41,8 @@ The code has been designed to where I have created multiply functions that rely 
 As for testing,
 </p>
 
+<div style="page-break-after: always;"></div>
+
 ---
 ## Module Description
 ---
@@ -51,13 +53,13 @@ My program currently has five main functions. All of <b>Category 1 and Category 
 ### 1A. Converting a String to Uppercase or Lowercase
 
 <p style = "text-align: justify;">
-This function is intended to be used to take a string in and then convert the letter to uppercase or lowercase based on the user's choice. The program should ignore all non-letter characters and only perform the capitilization on the letters of the English alphabet. It doesn't support special letters with tones, as programming for each case would cause the program to contain a lot of if-else or cases, which would hinder the readability of the program. A rough description of how the program works is quoted below: 
+This function is intended to be used to take a string in and then convert the letter to uppercase or lowercase based on the user's choice. The program should ignore all non-letter characters and only perform the capitilization on the letters of the English alphabet. It doesn't support special letters with tones, as programming for each case would cause the program to contain a lot of if-else or cases, which would hinder the readability of the program. A rough description of how the program works is quoted and adjusted from the Preliminary Description: 
 <br>
 
 > - This method will run a menu loop that asks the user to choose between converting to uppercase and lowercase.
-> - Afterwards the program will run a for loop that will get the i'th element of the list, and set that as a temp array.
-> - This array will then passed into "charArrayToAsciiArray" to which it'll then be set to the temp array again.
-> - This temp array will then be passed into a function called "arrayToUpper" or "arrayToLower" depending on the option chosen by the user.
+> - Afterwards the program will run a for loop that will get the i'th element of the list, and set that as a char array.
+> - This array will then passed into "charArrayToAsciiArray" to which it'll then be set to an ascii array.
+> - This ascii array will then be passed into a function called "arrayToUpper" or "arrayToLower" depending on the option chosen by the user.
 >   - The program will check if the int is within the range of being either lowercase or uppercase and convert them to the right case by adding or subtracting 32 for each respective cases.
 >   - It'll loop through the entire array and set the current element of the passed array.
 >   - Then it'll run asciiArrayToString method and set the output to "returnString"
@@ -71,43 +73,76 @@ This function is intended to be used to take a string in and then convert the le
 ### 1B. Identifying Whether or Not a String Contains Any Numbers
 
 <p style = "text-align: justify;">
-Text here
+This function is inteded to be used in order to take in a string, and then check if there are any numbers within the string. After checking each character in the string th eprogram will display a message of whether there was or wasn't a number within the string. Afterward it should write the result out to a file. It'll accomplish this by checking the ascii value of the char against the range of ascii values between 48 & 57 inclusive, as those are the ascii values of the number 0-9. A runthrough of how the program is quote and adjusted form the Preliminary Description below:
+<br>
 
-> - This method will run loop that runs through the passed list and set the current element of the list to a temp array.
-> - This temp array is then going to be passed into another method called "checkNumericsExist"
->   - "checkNumericsExist" will return a true or false value.
->   - It takes the array and cycles through it, checking if there is a value in the array that is between 48 and 57 inc
->   - If it finds a match it'll set a variable called "numericsExistInString" to true.
->   - Then the function will return "numericsExistInString".
-> - Based on the returned value the function will print out whether or not a numeric value existed within the provided string.
+> - The method will run a for loop that will get the i'th element of the list, and set that as a char array.
+> - This array will then passed into "charArrayToAsciiArray" to which it'll then be set to an ascii array.
+> - The ascii array is then sent into a function called "checkNumericsExist" and the output assigned to "doNumericsExist".
+>   - The function will loop through each element in the array.
+>   - And check them against the range of 48 to 57 inclusive.
+>   - If there is a number within the range, a return boolean is set to true, otherwise it remains false.
+> - Afterwards, the main method will run an if statement check if the variable "doNumericsExist" is true or false.
+> - Depending on which state the boolean is, it'll print out saying that there was or wasn't a number in the given string.
+> Lastly it'll save the print output into a file.
 
 </p>
 
 ### 1C. Identifying Whether or Not a Given String is a Valid Number
 
 <p style = "text-align: justify;">
-Text here
+The purpose of this function is to identify is the string that is give is a valid number. It checks is there or only numbers contained within a string that is provided, otherwise it'll tell the user that the string proposed was no valid. It does this by checking if the passed ascii values array has any values which are not within the range of 48 to 57 represent the numbers 0-9. If there are any outside this range it'll return a string state that the initial string provided was invalid. A rundown of the code is taken from the preliminary description and shown below:
 <br>
 
-> - Blockquote list here
+> - The program will run a for loop that will get the i'th element of the list, and set that as a char array.
+> - Afterwards, inside this loop the array is passed into a function called charArrayToAsciiArray to convert the char array to an ascii array.
+> - This array is then sent to "arrayToNumbers" and the return value to a list.
+>   - Inside "arrayToNumbers" it'll loop based on the length of the array.
+>   - Inside this loop it'll set "inputArray" to the i'th element and compare using an if statement.
+>     - If "inputArray" value is between 48 and 57 inclusive, it'll set outputString to outputString + the respective number.
+>     - Otherwise, it'll set "stringIsInvalid" to true, and set "nonNumberString" to the "noNumberString" + the value of the current element.
+>   - At the end it'll check if "stringIsInvalid" is true.
+>     - If so, the returnList element 0 is set to " was invalid. (Commas and Periods are not included)".
+>     - Otherwise the returnList element 0 is set to " was the valid number: " + outputString
+>     - Plus it'll set the returnList element 1 to "nonNumberString".
+>     - And returnList element 2 to "outputString".
+>   - Afterwards the function will set "stringToPrint" to the 0'th element of the returned list.
+>   - Lastly, the program will print out the result and save it to a text file.
 </p>
 
 ### 1D. Removing Numbers from a String and Changing the Case
 
 <p style = "text-align: justify;">
-Text here
+This function is designed to take in a string and then remove any numbers that are in it and then change the capitalization of the string through user input. First it'll take in the string and convert it to an ascii array, and then check if there are any ascii values that represent numbers. If so it'll remove those values and then ask the user if they'd like to go to lowercase of upppercase. This function reuses code from 1A and 1C, and a breakdown of the code is taken from the Preliminary Description and shown below:
 <br>
 
-> - Blockquote list here
+> - This method will run a menu loop that asks the user to choose between converting to uppercase and lowercase.
+>  - Afterwards, the program will run a loop that'll get the i'th element of the passed in list, and set it to a char array.
+> - This char array is then converted to an ascii array.
+> - The ascii array then sent to "arrayToNumbers" and the 1st element set to "nonNumberString".
+> - "nonNumberString" is then changed to a char array then to an ascii value array.
+> - Afterwards, the new ascii array is then passed into "arrayToUpper" or "arrayToLower" depending on the the choice the user made.
+> - Finally it is printout out and then saved into a text file.
 </p>
 
 ### 2C. Conveting a Number Between Hours, Minutes and Seconds
 
 <p style = "text-align: justify;">
-Text here
+This code is used to convert a given amount of time to a different unit of time. It can convert seconds, to minutes or hours, vice versa in any combination. You could go directly from hours to seconds, rather than hours to minutes. Doing it this way made it a lot easier without having to think about too much extra. It works by taking in the the units the user in coming from and then which units they'd like to convert to. An overview of the code was taken from the Preliminary Decription, adjusted and displayed below:
 <br>
 
-> - Blockquote list here
+> - The function will start by running a new menu funciton called "whichTimeConversion".
+> - This'll get the units in which the user wants to convert to and from.
+> - It'll set the units to "convertTo" and "convertFrom".
+> - Afterwards, it'll run a loop that will get the i'th element of the passed in list and set it to a char array.
+> - This char array is then converted to an ascii array.
+> - Then "timeNumber" is set to the parsed integer form of the 2nd element of "arrayToNumbers" passing in the ascii array.
+> - Afterwards a switch case is used to check "convertFrom" and then run if statements inside each case.
+>   - It checks the "convertTo" value and then does multiplication or division dependingly.
+>   - It all also does a mod check to get the remainder and then set each of the "convertedHours", "convertedMinutes", "convertedSeconds" variables.
+> - These variables are then put into a string with the original unit to convert from.
+> - And then printed to the terminal and saved in a text file.
+> 
 </p>
 
 ---
@@ -125,9 +160,14 @@ You can use screen shots to support your answer in this part.
 ## Black-Box Test Cases
 ----
 
+### 1A. Converting a String to Uppercase or Lowercase
+
 <p style = "text-align: justify;">
-All test cases you have designed in the part 4 of this assessment, assumptions you made if any, and brief explanation why you have done the test design in the way you have done.
+Boundary Value Testing was chosen to test this function. It was chosen as the input is an integer from an integer array. The code compares current element of the array against a range of integers that represent the capitalization of each character in a string. Testing these boundaries can verify that the set ranges are working properly and perform the right function based on the calculation being required. However, the code still needs to take in the user input before performing the conversion, as it needs to ask if the user is converting to uppercase or lowercase. There is no need to test these values, as the program will automatically let the user know if the input was invalid. 
+
+Since we are only testing the raw, arrayToUpper and arrayToLower, we can use an array with the numbers, -1 & 0, to check the valid ascii boundary, 64 & 65 for the boundary between uppercase "A" and then 90 & 91 for the boundary between uppercase "Z" for arrayToLower. Values between 65 and 90 inclusive, should be registered as valid and change to their lowercase counterpart, while any other values should remain the exact same. Similarly, for arrayToUpper, the values -1 & 0, for ascii range, 96 & 97 for lowercase "a", and 122 & 123 for lowercase "z". Once more, only those within the lowercase bounds should change and nothing else should become different.
 <br>
+
 </p>
 
 ---

@@ -104,12 +104,13 @@ public class Functions
 			}
 
 			String convertedString = asciiArrayToString(convertedAsciiArray);
+			String stringToPrint = "Your converted string is: " + convertedString;
 
 			System.out.println("\nYour original string was: " + originalString);
-			System.out.println("Your converted string is: " + convertedString);
+			System.out.println(stringToPrint);
 			System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
 
-			writeOneRow("a_ConvertCases.txt", "Your converted string is: " + convertedString);
+			writeOneRow("a_ConvertCases.txt", stringToPrint);
 		}
 	}
 
@@ -162,17 +163,19 @@ public class Functions
 
 			if(doNumericsExist == true)
 			{
-				System.out.println("\nNumbers do exist in: " + originalString);
+				String stringToPrint = "\nNumbers do exist in: " + originalString;
+				System.out.println(stringToPrint);
 				System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
 				
-				writeOneRow("b_DoNumercsExist.txt", "\nNumbers do exist in: " + originalString);
+				writeOneRow("b_DoNumercsExist.txt", stringToPrint);
 			}
 			else
 			{
-				System.out.println("\nNumbers do NOT exist in: " + originalString);
+				String stringToPrint = "\nNumbers do NOT exist in: " + originalString;
+				System.out.println(stringToPrint);
 				System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =");
 				
-				writeOneRow("b_DoNumercsExist.txt", "\nNumbers do NOT exist in: " + originalString);
+				writeOneRow("b_DoNumercsExist.txt", stringToPrint);
 			}
 		}
 	}
@@ -197,7 +200,6 @@ public class Functions
 		{
 			char[] charArray = inputCharList.get(i);
 			int[] asciiArray = charArrayToAsciiArray(charArray);
-			String originalString = asciiArrayToString(asciiArray);
 			List<String> returnedList = new ArrayList<String>();
 
 			returnedList = arrayToNumbers(asciiArray);
