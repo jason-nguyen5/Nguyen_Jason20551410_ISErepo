@@ -155,13 +155,13 @@ Below is how my new code will run:
 
 	> There will be a method called twoC_TimeConversion, that will be used to convert a number from second, minutes, or hours to hours, minutes, or seconds
 		>> The program will run a new menu function called WhichTimeConversions.
-			>>> whichTimeConversions will run a menu loop that asks the user which unit they'd like to convert to.
+			>>> whichTimeConversions will run a menu loop that asks the user which unit they'd like to convert from.
 			>>> The unit choose is set to element 0 of returnArray
 			>>> Then it'll ask which unit they'd like to go to, revealing options that weren't the same as the one chosen.
 			>>> This second unit is then set to element 1 of returnArray.
 			>>> returnArray is then returned
 		>> Afterwards, element 0 and 1 are set to convertFrom and convertTo respectively.
-		>> Then the input the value will be converted to a char array with runStringToChar from Menu
+		>> Then the input value will be converted to a char array with runStringToChar from Menu
 		>> Then char array to ascii array using charArrayToAscii
 		>> Then passed to arrayToNumbers, and setting element 2 of the returned list to timeNumber
 		>> Afterwards, there will run a switch case that'll check the convertFrom value against 'h', 'm', 's'.
