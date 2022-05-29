@@ -185,7 +185,11 @@ Cohesion and redundacy have been represent through the menu codes. Most of the m
 ## Black-Box Test Cases
 ----
 <p style = "text-align: justify;">
-Some of the code couldn't be tested as I didn't know any way to test it without hardcoding an input value, since most of the functions take in user input. Test code still remains, however just commented out in the production code. Furhtermore, manual testing was conducted during the writing of the original code to ensure that the function could be built, therefore most tests were run through the terminal while running the program. Nonetheless, there were still some functions that could be tested using the testing techniques.
+Some of the code couldn't be tested as I didn't know any way to test it without hardcoding an input value, since most of the functions take in user input. Test code still remains, however just commented out in the production code. Furhtermore, manual testing was conducted during the writing of the original code to ensure that the function could be built, therefore most tests were run through the terminal while running the program. Nonetheless, there were still some functions that could be tested using the testing techniques. 
+</p>
+
+<p style = "text-align: justify;">
+All test cases have had their test functionality be put into a file called TestFunctions.java, where there is a menu to choose exactly which function is tested. Each function is tested using the assert function. Futhermore, it is assumed that the inputs will be done using a keyboard and that they are correct to avoid crashing the testing code. JUnit was not used as I could not get it work during my workshop, and did not have enough time to spend attempting to get JUnit to work. This will be discussed later in the Ethics section.
 </p>
 
 ### 1A. Converting a String to Uppercase or Lowercase
@@ -386,7 +390,16 @@ For 2C, converting between time units, I have choosen to go with equivalence par
 
 <p style = "text-align: justify;">
 All test cases you have designed as answer for the part 5 of this assessment, assumptions you made if any, brief explanation why you have done the test design in the way you have done
-<br>
+
+The two cases in which I choosen to perform white-box testing is for my Main Menu and 2C. Time conversions is a function that runs almost entirely self contained, relying on two other functions to convert numbers and char into strings; not performing calculations. Main menu was choosen as it is the first thing that users will interact with, so I'd like to perform as much extensive testing as possible. All the other functions are just additions, however the main menu is where all the other methods are called. Therefore I'd like to focus as much as possible on these functions.
+</p>
+
+<p style = "text-align: justify;">
+The main menu regularly takes in inputs, therefore I don't know how to write an additional file to change these inputs, instead I have choosen to hardcode certain values trying to test the program. These values can still be found within the code, except they are just commented out. By hardcoding the values, I can identify which exact variable is causing issues in the menu.
+</p>
+
+<p style = "text-align: justify;">
+As for 2C, the Time Conversions. I have also taken a hardcoding approach, however I have also added the ability to test the "whichTimeConversion" and "getFromUnit" using assert functions. These assert functions have been placed within a seperate file called
 </p>
 
 ---
@@ -416,6 +429,8 @@ Log of the use of your version control system, any explanation /discussion on ve
 
 <p style = "text-align: justify;">
 Answer to Q7
+
+JUNIT WHY I DIDN"T USE
 <br>
 </p>
 
