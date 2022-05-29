@@ -150,10 +150,6 @@ This code is used to convert a given amount of time to a different unit of time.
 ----
 
 <p style = "text-align: justify;">
-<i>Description on how to run your production code with correct commands.
-Discussion on how different modularity concepts are applied in your code, review checklist you have created, results of conducting the review using the review checklist with explanation on your results and how you have addressed any issues.
-You can use screen shots to support your answer in this part.</i>
-
 In order to run the production code, you need to build the Menu.java file using `javac Menu.java`. This should automatically build the Function.java aswell, as the Menu file calls upon the Function file. Afterwards the Menu can simply be run using `java Menu`. All these commands should be run inside the Cdoe folder directory. Afterwards the user can just follow the on-screen instructions and make their choices using the keyboard.
 </p>
 
@@ -189,7 +185,7 @@ Cohesion and redundacy have been represent through the menu codes. Most of the m
 ## Black-Box Test Cases
 ----
 <p style = "text-align: justify;">
-** Disclaimer: Some of the code couldn't be tested as I didn't know any way to test it without hardcoding an input value, since most of the functions take in user input. Test code still remains, however just commented out in the production code.
+Some of the code couldn't be tested as I didn't know any way to test it without hardcoding an input value, since most of the functions take in user input. Test code still remains, however just commented out in the production code. Furhtermore, manual testing was conducted during the writing of the original code to ensure that the function could be built, therefore most tests were run through the terminal while running the program. Nonetheless, there were still some functions that could be tested using the testing techniques.
 </p>
 
 ### 1A. Converting a String to Uppercase or Lowercase
@@ -383,8 +379,6 @@ For 2C, converting between time units, I have choosen to go with equivalence par
 | All other test strings | "0 Hours, 0 Minutes, 0 Seconds" | 
 
 </p>
-
-
 
 ---
 ## White-Box Test Cases
