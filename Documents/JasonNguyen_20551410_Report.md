@@ -188,16 +188,203 @@ Cohesion and redundacy have been represent through the menu codes. Most of the m
 ---
 ## Black-Box Test Cases
 ----
+<p style = "text-align: justify;">
+** Disclaimer: Some of the code couldn't be tested as I didn't know any way to test it without hardcoding an input value, since most of the functions take in user input. Test code still remains, however just commented out in the production code.
+</p>
 
 ### 1A. Converting a String to Uppercase or Lowercase
 
 <p style = "text-align: justify;">
 Boundary Value Testing was chosen to test this function. It was chosen as the input is an integer from an integer array. The code compares current element of the array against a range of integers that represent the capitalization of each character in a string. Testing these boundaries can verify that the set ranges are working properly and perform the right function based on the calculation being required. However, the code still needs to take in the user input before performing the conversion, as it needs to ask if the user is converting to uppercase or lowercase. There is no need to test these values, as the program will automatically let the user know if the input was invalid. 
+</p>
 
+<p style = "text-align: justify;">
 Since we are only testing the raw, arrayToUpper and arrayToLower, we can use an array with the numbers, -1 & 0, to check the valid ascii boundary, 64 & 65 for the boundary between uppercase "A" and then 90 & 91 for the boundary between uppercase "Z" for arrayToLower. Values between 65 and 90 inclusive, should be registered as valid and change to their lowercase counterpart, while any other values should remain the exact same. Similarly, for arrayToUpper, the values -1 & 0, for ascii range, 96 & 97 for lowercase "a", and 122 & 123 for lowercase "z". Once more, only those within the lowercase bounds should change and nothing else should become different.
+
 <br>
 
+| arrayToUpper |  Test Data  | Expected Result |
+| :---:        |    :----:   |    :---:   |
+| -1 / 0       | -1          | -1         |
+|              | 0           | 0          | 
+| 96 / 97      | 96          | 96         |
+|              | 97          | 65         |
+| 122 / 123    | [122, 123]  | [122, 91]  |
+<br>
+| arrayToLower |  Test Data  | Expected Result |
+| -1 / 0       | -1          | -1         |
+|              | 0           | 0          | 
+| 64 / 65      | 64    | 64   |
+|   | 65 |97 |
+| 90 / 91      | 90    | 122  |
+| | 91 | 91
+
+<br>
+
+| Input | Expected Output |
+| :--- | :--- |
+| "1410" + u | "1410" |
+| "1410" + l | "1410" |
+| "Nguyen" + u | "NGUYEN" |
+| "Nguyen" + l | "nguyen" |
+| "Jason NGUYEN" + u | "JASON NGUYEN" |
+| "Jason NGUYEN" + l | "jason nguyen" |
+| "Doctor Strange in the Multiverse of Madness" + u | "DOCTOR STRANGE IN THE MULTIVERSE OF MADNESS" |
+| "Doctor Strange in the Multiverse of Madness" + u | "doctor strange in the multiverse of madness" |
 </p>
+
+### 1B. Identifying Whether or Not a String Contains Any Numbers
+
+<p style = "text-align: justify;">
+Boundary Value Analysis was chosen to test this function. In this function, the main function called "b_DoNumericsExist" does not return any value, instead only the method call "checkNumericsExist" contains a boolean return value. Therefore, I have choosen to test this module for the functionality testing of 1B. BVA was chosen as the input is an integer array that is from a range of varibles. Since the output can only be valid or invalid, boundary value testing was chosen. The selction was because the integers between 48 to 57 inclusive represent the numbers 0 to 9 meaning that anything within this range is valid and everything outside is invalid. 
+<br>
+
+| Invalid |  Valid  |  Invalid |
+| :---:        |    :----:   |    :---:   |
+| <= 47       | 48 - 57     | >= 58  |
+
+<br>
+
+| checkNumericsExist |  Test Data  | Expected Result |
+| :---:        |    :----:    |    :---:     |
+| 47 / 48      | 47      | False  |
+| | 48 | True|
+| 57 / 58      | 57    | True  |
+| | 58 | False |
+
+<br>
+
+| Input | Expected Output |
+| :--- | :--- |
+| "1410" | "Numbers do exist" |
+| "Nguyen" | "Numbers do NOT exist" |
+| "Jason NGUYEN" | "Numbers do NOT exist" |
+| "Doctor Strange in the Multiverse of Madness" | "Numbers do NOT exist" |
+</p>
+
+### 1C. Identifying Whether or Not a Given String is a Valid Number
+
+<p style = "text-align: justify;">
+Similarly to 1B, 1C will also be using bounday value analysis. The main function of 1C is called "c_StringIsValidNumber" however it doesn't return any values, instead it takes the returned value of "arrayToNumbers" and uses that, hence in this test case, we will be testing for "arrayToNumbers". Since this function checks the boundaries between 47 & 48 to  57 & 58, and sets the validity only when the integer is out of the range, we can use BVA to test the output. 
+
+<br>
+
+| String = Invalid |  Ignore      |  String = Invalid |
+| :---:            |    :----:    |    :---:          |
+| <= 47            | 48 - 57      | >= 58  |
+
+<br>
+
+| arrayToNumbers |  Test Data  | Expected Result |
+| :---:        |    :----:    |    :---:     |
+| 47 / 48      | 47      | False  |
+|              | 48      | True   |
+|              | [47, 48]| False  |
+| 57 / 58      | 57      | True   |
+|              | 58      | False  |
+|              | [57, 58]| False  |
+
+<br>
+
+| Input | Expected Output |
+| :--- | :--- |
+| "1410" | "Valid" |
+| "Nguyen" | "Invalid" |
+| "Jason NGUYEN" | "Invalid" |
+| "Doctor Strange in the Multiverse of Madness" | "Invalid" |
+</p>
+
+### 1D. Removing Numbers from a String and Changing the Case
+
+<p style = "text-align: justify;">
+For 1D, "d_RemoveNumericsAndConvertCase" does not return any values, but instead prints it directly to the terminal. However it does use the functions of "arrayToUpper" and "arrayToLower", and "arrayToNumbers", from 1A and 1C. Therefore, the only tests that can be run are those for the aforementioned functions, which have been performed in prior test cases. Manual testing and entering inputs can still be performed, however code for such cannot be provided as I don't know how to program inputs without hardcoding and testing them.If manually entering the data was testable, it'd fall under equivalence partioning as we are just testing a range of two outcomes, not many boundaries like before.
+
+<br>
+
+| arrayToUpper |  Test Data  | Expected Result |
+| :---:        |    :----:   |    :---:   |
+| -1 / 0       | -1          | -1         |
+|              | 0           | 0          | 
+| 96 / 97      | 96          | 96         |
+|              | 97          | 65         |
+| 122 / 123    | [122, 123]  | [122, 91]  |
+
+<br>
+
+| arrayToLower |  Test Data  | Expected Result |
+| :---: | :---: | :---: |
+| -1 / 0       | -1          | -1         |
+|              | 0           | 0          | 
+| 64 / 65      | 64    | 64   |
+|   | 65 |97 |
+| 90 / 91      | 90    | 122  |
+| | 91 | 91
+
+<br>
+
+| String = Invalid |  Ignore      |  String = Invalid |
+| :---:            |    :----:    |    :---:          |
+| <= 47            | 48 - 57      | >= 58  |
+
+<br>
+
+| arrayToNumbers |  Test Data  | Expected Result |
+| :---:        |    :----:    |    :---:     |
+| 47 / 48      | 47      | False  |
+|              | 48      | True   |
+|              | [47, 48]| False  |
+| 57 / 58      | 57      | True   |
+|              | 58      | False  |
+|              | [57, 58]| False  |
+
+<br>
+
+| Input | Expected Output |
+| :--- | :--- |
+| "1410" + u | "" |
+| "1410" + l | "" |
+| "Nguyen" + u | "NGUYEN" |
+| "Nguyen" + l | "nguyen" |
+| "Jason NGUYEN" + u | "JASON NGUYEN" |
+| "Jason NGUYEN" + l | "jason nguyen" |
+| "Doctor Strange in the Multiverse of Madness" + u | "DOCTOR STRANGE IN THE MULTIVERSE OF MADNESS" |
+| "Doctor Strange in the Multiverse of Madness" + u | "doctor strange in the multiverse of madness" |
+</p>
+
+### 2C. Conveting a Number Between Hours, Minutes and Seconds
+
+<p style = "text-align: justify;">
+For 2C, converting between time units, I have choosen to go with equivalence partioning as we are test for validity of three values. We are only testing "whichTimeConversion" because the main function  "d_RemoveNumericsAndConvertCase" does not return any values. By testing certain values we can see if the program recognizes the three available inputs.
+
+<br>
+
+| whichTimeConversion |  Test Data  | Expected Result |
+| :---:    |    :----:    |    :---:     |
+| Hours    | 'h'      | 'h'  |
+| Hours    | 'H'      | 'h'  |
+| Minutes  | 'm'      | 'm'  |
+| Minutes  | 'M'      | 'm'  |
+| Seconds  | 's'      | 's'  |
+| Seconds  | 'S'      | 's'  |
+
+<br>
+
+| Input | Expected Output |
+| :--- | :--- |
+| "1410" + h + h | "1410 Hours, 0 Minutes, 0 Seconds" |
+| "1410" + h + m | "84600 Hours, 0 Minutes, 0 Seconds" |
+| "1410" + h + s | "5076000 Hours, 0 Minutes, 0 Seconds" |
+| "1410" + m + h | "23 Hours, 30 Minutes, 0 Seconds" |
+| "1410" + m + m | "0 Hours, 1410 Minutes, 0 Seconds" |
+| "1410" + m + s | "0 Hours, 0 Minutes, 84600 Seconds" |
+| "1410" + s + h | "0 Hours, 23 Minutes, 30 Seconds" |
+| "1410" + s + m | "0 Hours, 23 Minutes, 30 Seconds" |
+| "1410" + s + s | "0 Hours, 0 Minutes, 1410 Seconds" |
+| All other test strings | "0 Hours, 0 Minutes, 0 Seconds" | 
+
+</p>
+
+
 
 ---
 ## White-Box Test Cases

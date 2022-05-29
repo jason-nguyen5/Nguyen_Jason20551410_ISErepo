@@ -85,7 +85,8 @@ public class Functions
 	public static void a_ConvertCases(List<char[]> inputCharList)
 	{
 		boolean wantUpper = askWhichCaseMenu();
-		
+		// wantUpper = true;
+		// wantUpper = false;
 		for(int i = 0; i < inputCharList.size(); i++)
 		{
 			char[] charArray = inputCharList.get(i);
@@ -160,6 +161,8 @@ public class Functions
 			String originalString = asciiArrayToString(asciiArray);
 
 			doNumericsExist = checkNumericsExist(asciiArray);
+			// doNumericsExist = true;
+			// doNumericsExist = false;
 
 			if(doNumericsExist == true)
 			{
@@ -203,7 +206,9 @@ public class Functions
 			List<String> returnedList = new ArrayList<String>();
 
 			returnedList = arrayToNumbers(asciiArray);
-
+			// returnedList.set(0, "Invalid");
+			// returnedList.set(0, "Valid");
+			
 			String stringToPrint = "\nThe string: " + asciiArrayToString(asciiArray) + returnedList.get(0);
 
 			System.out.println(stringToPrint);

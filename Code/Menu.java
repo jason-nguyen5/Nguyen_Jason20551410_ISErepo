@@ -161,6 +161,10 @@ public class Menu
 		List<char[]> returnList = new ArrayList<char[]>();
 		
         stringInput = stringInputAndConfirm("Please enter the string you wish to convert: ");
+		// stringInput = "1410";
+		// stringInput = "Nguyen"
+		// stringInput = "Jason Nguyen";
+		// stringInput = "Doctor Strange in the Multiverse of Madness";
 
 		returnList.add(runStringToCharArray(stringInput));
 
