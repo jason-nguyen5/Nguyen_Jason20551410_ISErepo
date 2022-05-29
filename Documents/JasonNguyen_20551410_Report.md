@@ -150,11 +150,40 @@ This code is used to convert a given amount of time to a different unit of time.
 ----
 
 <p style = "text-align: justify;">
-Description on how to run your production code with correct commands.
+<i>Description on how to run your production code with correct commands.
 Discussion on how different modularity concepts are applied in your code, review checklist you have created, results of conducting the review using the review checklist with explanation on your results and how you have addressed any issues.
-You can use screen shots to support your answer in this part.
-<br>
+You can use screen shots to support your answer in this part.</i>
+
+In order to run the production code, you need to build the Menu.java file using `javac Menu.java`. This should automatically build the Function.java aswell, as the Menu file calls upon the Function file. Afterwards the Menu can simply be run using `java Menu`. All these commands should be run inside the Cdoe folder directory. Afterwards the user can just follow the on-screen instructions and make their choices using the keyboard.
 </p>
+
+<p style = "text-align: justify;">
+Some of the modularity concepts used in my code are, coupling, cohension and redundacy. Code has been programmed in a sense where there is little to no reliance on global variables. All functions create their own local variables, and either get passed or return variables. There should be no instances where global variables are being adjusted within the entire program. Furthermore, variables have been named very clearly and are named based on their function so that upon quick inspection, it is easy to tell what the variable should be. i.e, the boolean wantUpper would indicate that depending on if it's true or false the user want to convert to upper or lowercase. Additionally, all functions and variables have adhered to camal casing practices.  
+</p>
+
+<p style = "text-align: justify;">
+Cohesion and redundacy have been represent through the menu codes. Most of the menus are run using methods that contain loops. This is so that the main code can be presented as more readble while still being able to undestand where the certain print statements are located. Within these menus, they all run while loops that check the user's input and they should all be able to realise when the input is invalid and request the user to try again. A prime example or redudancy avoidance, is the reusage of modules from 1A and 1C for the completion of 1D. The task for 1D requires the program to remove numbers, and change the cases, therefore I just reused the menu from 1A asking which case the user would like to change. In addition, from 1C, additionally functionality was added so that while it's check the ascii values of the non 0-9 numbers, it'd add them to another array and return that as 2nd element in the already returned list. Writing the code in 1C made more sense than rewriting the same exact checking code except with different outputs. By simply adding an extra few lines of code, it made it reusable and prevention the need for excessive repeated code. Afterwards just converting the arrays to upper and lowercase was easily done by calling the respective functions.
+</p>
+
+<b> Coding Checklist </b>
+<ol>
+  <li>Is each "/" operator working with the correct datatype?</li>
+  <li>Do all string comparisons use the ".equals()" method?</li>
+  <li>For functions that return a value, is the returned value being used?</li>
+  <li>Are there any variables that have not been initialized?</li>
+  <li>Are the return values the same and as the function type?</li>
+  <li>Are there "tolerance" values for real numbers?</li>
+  <li>Do calls provide the necessary parameters in the correct order?</li>
+  <li>Can a variable's purpose be quick and easily identified by just the name?</li>
+  <li>Are there null values being used?</li>
+  <li>Are arrays and variables atleast set to empty rather than null?</li>
+  <li>Are there any global variables?</li>
+  <li>Are if statements less than 3 if's long?</li>
+  <li>Are lines of code larger than the screen and need to go to next line?</li>
+  <li>Are comments on seperate lines?</li>
+  <li>Are all lines of code ended with a semi-coloum, where necessary?</li>
+  <li>Are variables created, and assigned in the right order?</li>
+</ol>
 
 ---
 ## Black-Box Test Cases
