@@ -78,19 +78,53 @@ For my revision of the program, I will have a main menu class that calls upon ea
 Before, my program would have had a lot of repeated code and thus would have greatly heightened the risk of creating data redundancies. Now, I will create a more generic methods that can reused for multiple functions.
 
 Below is how my new code will run:
-- Main:
-	> Ask the user if they'd like to manually write in data using their keyboard or read the data from a file instead. This'll be ran in a loop to avoid an incorrect choice from crashing the program or causing it to end prematurely.
-		- If the user wishes to read from a file, the program will open another menu and then ask them to type the path to the file including the file extension. This menu will also give an example of what data should be within this file. 
-			>>> For example it should have each line be a new string. 
+- Menu:
+	> (inputTypeMenu Function) Ask the user if they'd like to manually write in data using their keyboard or read the data from a file instead. This'll be ran in a loop to avoid an incorrect choice from crashing the program or causing it to end prematurely.
+		- If the user wishes to read from a file, the program will open another menu and then ask them to type the path to the file including the file extension.
 			>>> Afterwards the name of this file will be saved as a string and then passed into a read file function that'll read the lines and convert each line in an array, and then each array will be added to list to be called from.
 		- If the user wishes to manually type in the string, they will prompted to type in their string and afterwards, it will be converted into a char array which will be added to a list to be called from.
 		- If the user wishes to exit the program, they can select the option and it will just a variable that runs the loop to false, causing the loop to end.
-	> After data has be registered into a list, there will be a second menu asking the user to choose with function they'd like to call upon.
+	> After data has be registered into the list, there will be a second menu asking the user to choose with function they'd like to call upon.
 	> The user will choose from the these functions that will have the code for them in a separate file most likely called Functions.java
 	> When a function is chosen the Main program will call the Functions class and the method required while passing in the list of strings.
 		- These functions will run in a for loop, that loop for the duration of the size of the list so that it can run for automatic in cases where that option was chosen.
 	> This returned data will then be saved into an output string to where the program can the print the output to display to the user.
 	> These saved strings will also be written to a file and be outputted after the loop has ended.
+
+	> There is a method called "stringInputAndConfirm" which will run to confirm if the input the user entered was correct.
+		> Runs a loop called "runningStringConfirm".
+			> Print out asking the user if the string they entered was correct and then they can select yes or no.
+				- If they choose no then the loop will loop.
+				- Otherwise the loop will end. 
+		> After the loop ends, the method will return the input string.
+
+	> There is a method called "runStringToCharArray" that will convert a string to an array of chars.
+		> The method takes in the string and then creates a "charArray" that is the length of the string.
+			> Afterward it runs a for loop, that loops for the duration of i until i equals the length of the string.
+			> Within this loop the program set the i'th element of the char array to the char at i for the stringInput.
+		> Afterwards it returns the charArray. 
+
+	> This is a method called "runManualInput" that will get the input of the user and assign it to a list.
+		> It runs "stringInputAndConfirm", passing in "Please enter the string you wish to convert: ".
+		> And then takes the returned value as "stringInput".
+		> "stringInput" is then added to a list.
+		> And then it is returns this list, "returnList".
+
+	> This is a method called "runAutomaticInput" that will get the input of the user and then access the text file and save each line a list.
+		> This function runs "stringInputAndConfirm", passing in "Please enter the path to the file, including the extension: ".
+		> Afterwards, the output is assigned to "stringInput".
+		> The "stringInput" is then passed into a function called "readFile".
+		> The retunr output is then set to "returnList" and then returned.
+
+	> "readFile" is a function that takes an input string, then read every line from that file and then return the lines in a list.
+		> Try to open a new file stream and load them into a buffer.
+		> Read the buffer.
+		> Run a while loop that runs while the line isn't null.
+			> Run "runStringToCharArray" passing in the read line and save it to a "tempArray".
+			> Add the "tempArray" to the "returnList".
+			> Read the next line.
+		> Catch any errors.
+		> Return the list.
 
 - Functions:
 	> There will be a method called "charArrayToAsciiArray", which will convert a char array into an ascii array.
@@ -133,9 +167,7 @@ Below is how my new code will run:
 		>> This array is then sent to "arrayToNumbers" and set 0'th element of the return value to a string variable.
 			>>> Inside "arrayToNumbers" it'll loop based on the length of the array.
 			>>> Inside this loop it'll set "arrayInput" to the i'th element and compare it to a switch case.
-				- If arrayInput is between 48 and 57 inclusive, it'll set outputString to outputString + the respective number, and it'll set numOfDigits to numOfDigits + 1.
-				- If arrayInput is equal to 44, it'll set outputString to outputString + a comma, and then add numOfCommas to numOfCommas + 1
-				- If arrayInput is equal to 46, it'll set outputString to outputString + a period, and then add numPeriodsInString to numPeriodsInString + 1.
+				- If arrayInput is between 48 and 57 inclusive, it'll set outputString to outputString + the respective number
 				- Else, it'll set invalidString to true, and set "nonNumberString" to the "noNumberString" + the value of the current element.
 			>>> At the end it'll check if invalidString is true, or numPeriodsInString is greater than 2.
 				- If so, the returnList element 0 is set to "was an invalid number."

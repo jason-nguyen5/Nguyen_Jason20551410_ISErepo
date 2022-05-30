@@ -198,6 +198,7 @@ Cohesion and redundacy have been represent through the menu codes. Most of the m
   <li>Are comments on seperate lines?</li>
   <li>Are all lines of code ended with a semi-coloum, where necessary?</li>
   <li>Are variables created, and assigned in the right order?</li>
+  <li>Is there any repeated and unneccessary code?</li>
 </ol>
 
 <br>
@@ -570,5 +571,5 @@ Honestly, I didn't manage to fully program my code, as per described in the prel
 </p>
 
 <p style = "text-align: justify;">
-Although there was some functionality that was lost I'm actually still happy with all the other programs, as they run to my expectation. Testing was rather difficult and I'm upset that I wasn't able to 
+Although there was some functionality that was lost I'm actually still happy with all the other programs, as they run to my expectation. Testing was rather difficult and I'm upset that I wasn't able to test all the functions, since most of them did not return any values. In the future I would plan more towards this and only have a limited amount of functions or if possible, only one (being the main) that doesn't return values. Tetsing the black-box cases was done, however not extensively, since most of the testing was only done with either boundary value analysis or equivalence partioning, and not both. Next time I would attempt to try and have enough test cases where I could both testing methods for my black-box testing.
 </p>
