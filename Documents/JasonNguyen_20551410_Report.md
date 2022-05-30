@@ -12,7 +12,6 @@
 
 <div style="page-break-after: always;"></div>
 
-
 ---
 ## **Introduciton**
 ---
@@ -35,11 +34,11 @@ Aferwards, the user can choose any conversion they'd like and the program will r
 </p>
 
 <p style = "text-align: justify;">
-The code has been designed to where I have created multiply functions that rely on one another. Newer functions can call upon old functions to use their outputs. While this does increase coupling, it does promote the program to be more generic and versatile. The program is designed to use arrays and lists, for both automatic and manual data entry, so no matter what method of inputting data, the program still runs the same exact code without needing modification. There is a menu class which will be ran on startup, however it only gets the input type which conversion the user would like to run. When it comes to the actual calculations, the functions have been put in anothe class which the menu file calls and uses.
+The code has been designed to where I have created multiply functions that rely on one another. Newer functions can call upon old functions to use their outputs. While this does increase coupling, it does promote the program to be more generic and versatile. The program is designed to use arrays and lists, for both automatic and manual data entry, so no matter what method of inputting data, the program still runs the same exact code without needing modification. There is a menu class which will be ran on startup, however it only gets the input type which conversion the user would like to run. When it comes to the actual calculations, the functions have been put in another class which the menu file calls and uses.
 </p>
 
 <p style = "text-align: justify;">
-As for testing,
+As for testing, white and black-box testing have been performed throughout the code. Testing actually helped discover a few flaws that were ocerlooked, so thanks to the testing the functionality of the code has been even greater improved.
 </p>
 
 <div style="page-break-after: always;"></div>
@@ -211,7 +210,7 @@ Some of the code couldn't be tested as I didn't know any way to test it without 
 </p>
 
 <p style = "text-align: justify;">
-All test cases have had their test functionality be put into a file called TestFunctions.java, where there is a menu to choose exactly which function is tested. Each function is tested using the assert function. Futhermore, it is assumed that the inputs will be done using a keyboard and that they are correct to avoid crashing the testing code. JUnit was not used as I could not get it work during my workshop, and did not have enough time to spend attempting to get JUnit to work. This will be discussed later in the Ethics section.
+All test cases have had their test functionality be put into a file called TestFunctions.java, where there is a menu to choose exactly which function is tested. Each function is tested using the assert function. Futhermore, it is assumed that the inputs will be done using a keyboard and that they are correct to avoid crashing the testing code. JUnit was not used as I could not get it work during my workshop, and did not have enough time to spend attempting to get JUnit to work.
 </p>
 
 <br>
@@ -537,8 +536,15 @@ Another issue that was encountered was when the same unit for convertTo and conv
 ----
 
 <p style = "text-align: justify;">
-Log of the use of your version control system, any explanation /discussion on version control. (refer part 1 of the detailed description)
-<br>
+For version control I have used <b>git</b> to keep track of my files. Through the creation of an online github repository, the entire assignment can be accessed online.  Through the github repository, it allows for access from other locations along with making changes and to download and track progress on the project.
+</p>
+
+<p style = "text-align: justify;">
+Throughout the course of this assignment, I have been incrementally updating the local repository alongwith pushing the changes to the online repository aswell. Everytime I commit a file, I will write the file that I update, and then on the next line with an indent, I'll do a hyphen followed by any changes I've made. Most of the time it's just grammatical errors that I've fixed, which extended to file size, however thanks to this, I am able to track my progress. The only file that doesn't have any comments is the .DS_Store files, which are macOS files that just track the directory stored for each folder and it's files. Therefore interacting the files in any way will cause these files to update. The class files and a test.txt file are ignored as they are just temporary files that can be removed without any detrimental issues to the entire project. While the test.txt file can be removed, if done so there will be no file to test the program's ability to read a file.
+</p>
+
+<p style = "text-align: justify;">
+After completing the assignment, I will export the git log into a text file and store it within the Documents folder. It should be named "Git Log.txt"
 </p>
 
 ---
@@ -546,17 +552,23 @@ Log of the use of your version control system, any explanation /discussion on ve
 ----
 
 <p style = "text-align: justify;">
-Answer to Q7
+Ethics and professionalism are very important when it comes to usage and operation of my code. While the code is up on github for anyone to view and download, it should not be directly copied and pasted, and used without understanding. Most of the code is very situational is built in a way that each function utilizes each other. To take the code and then attempt to produce new code without a solid grasp on the operation could result in the loss of time and money. The code produces a lot of strings, instead of integers to avoid input mismatch errors, along with working in ascii, therefore if someone were to just copy the code and insert what they thought to be regular integers where there are ascii values, it could potentially cause large calculation errors when it comes to the time conversion program. This could not only harm those who take the could but could also harm me, as if the person who takes my code, points towards me saying that the issues were solely my responsibility, I could suffer from financial, social, and reputational damage as everyone would have a distrust in me and my programming abilities. Therefore it is highly important that we follow ethical and professional practices.
+</p>
 
-JUNIT WHY I DIDN"T USE
-<br>
+<p style = "text-align: justify;">
+In these ethical guidelines, it discusses how we need to act with honesty and maintain technical competence. For my take on how to avoid ethical and professional issues in my software, I'd like to focus on these two points.To show honesty in my work I would propose to plan ahead and begin working on the assignment as soon as possible, to avoid leavin this project to the last minute. This is due to the fact, that leaving such a large assignment to the end nearing its due date, will put more time pressure onto myself, possibly promoting unethical acts, such as stealing other work, and overlooking important fucntionalities. Furthermore, as for the maintenence of techincal competency, I would suggest leaving comments in my work to show an understanding and explanation for my code. By commenting I wish to show that I do have technical competence over my own work and that I wish to make it easy for another software engineer to read and follow along with my work. By showing a technical understand of my own code it helps me understand what I have written and gives me opportunities to react to any oversights that could negatively impact others. This will also show that it is all my original and non stolen work. Hopefully, by leaving comments and planning ahead, we can avoid any ethical issues, such as pilferring of code and dishonesty. In doing so, we can avoid any unneccessary time pressure from building up and causing one from acting unprofessionally and unethically.
+
 </p>
 
 ---
 ## Discussion
 ----
+Reflection of your own work, ways to improve your work and any other thing you wish to present.
 
 <p style = "text-align: justify;">
-Reflection of your own work, ways to improve your work and any other thing you wish to present.
-<br>
+Honestly, I didn't manage to fully program my code, as per described in the preliminary description. In my description I wrote that for 1C I would be able to distinguish between decimal values, and values with commas, however during the programming stage I realised that the code I had designed was not as flawless that I thought. After realising these flaws and that it would take a lot more effort to code than I would like, I decided to exclude this as it would be very difficult to code and very difficult to test it. 
+</p>
+
+<p style = "text-align: justify;">
+Although there was some functionality that was lost I'm actually still happy with all the other programs, as they run to my expectation. Testing was rather difficult and I'm upset that I wasn't able to 
 </p>
