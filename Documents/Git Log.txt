@@ -1,0 +1,546 @@
+commit 2cd6e94471b54a5a6cb501e03e5148ae52f562f1
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 31 00:07:33 2022 +0800
+
+    Updated Menu.java
+            - Added commenting
+            - Added extra code to readFile() to deal with files that don't exist or cannot be found
+    Updated Preliminary Description
+            - Updated the description to reflect code as per 3.3.d
+    Updated Markdown Report
+            - Updated Discussion
+
+commit dc17aacb6fca7aee6ae738b8c79f1c3fb42656a9
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Mon May 30 20:27:31 2022 +0800
+
+    Added test.txt
+    Updated Markdown Report
+            - Completed Ethics section
+            - Started writing Reflection
+    Updated .DS_Store
+
+commit 11bf2c201167bca2b55a93251541a8f5e2e8f645
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Sun May 29 20:46:24 2022 +0800
+
+    Added TestCases.txt
+            - Contains the test cases called for in Section 3.4
+
+commit cba231c972692dd242ec49c601839cbb84ecc0e3
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Sun May 29 19:38:38 2022 +0800
+
+    Updated Menu.java
+            - Added testing code
+    Updated Function.java
+            - Added testing code
+            - Added extra if statements for time conversion to correct same time unit calculations
+            - Added extra if statement to set output to "0" ir null in arrayToNumbers
+    Updated Markdown Report
+            - Completed Testing sections
+            - Added extra formatting to make it look nicer
+
+commit c93265879e9684dd8a28ec185999f98f8921721b
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Sun May 29 18:13:03 2022 +0800
+
+    Updated Functions.java
+            - Changed range symbols < & > to <= & >= in checkNumericsExist
+    Updated TestFunctions.java
+            - Change menu options
+            - Removed test_ashWhichCase
+            - Removed test_whichTimeConversions
+            - Finished programming all test functions
+    Updated Menu.java
+            - No major changes
+
+commit 93803b7d1774b68b98c370ab6563356949424597
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Sun May 29 16:49:14 2022 +0800
+
+    Updated Markdown Report
+            - Added JUnit and Assert mentioning to Black-Box Testing
+            - Added more text to White-Box Testing
+
+commit 2a2cde9e3bccbf48e7dc42f9049800ae2d5fba09
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Sun May 29 16:32:43 2022 +0800
+
+    Update Markdown Report
+            - Removed Question text for Modularity
+            - Updated beginning of Black-box testing
+
+commit 6b7f34caddd2dde91331a04d45f753438ef5a7ed
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Sun May 29 16:22:52 2022 +0800
+
+    Update all Code files
+            - Added test cases, and then commentted them out
+    Created TestFunctions.java
+    Updated Markdown Report
+            - Completed Black Box Testing Section
+
+commit 8567eeec7b5d25ce7c56e242bf5220c26a1acdc3
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Sun May 29 13:48:28 2022 +0800
+
+    Updated Markdown Report
+            - Fixed Grammar
+    Added TestFunctions.java
+
+commit 6fa8f8ed2b420d8bddfc5d0b09fec97df163cff1
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Sun May 29 13:32:24 2022 +0800
+
+    Updated .DS_Store
+    Updated Markdown Report
+            - Completed Modularity Section
+            - Completed Coding Checklist
+
+commit f8ec0793add883395df5bfbd918a027313959efd
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Sun May 29 12:35:28 2022 +0800
+
+    Updated Markdwon Report
+            - Finished writing module description section
+    Updated Functions.java
+            - Altered the final statement that is save to text file to be the same as the string printed in the terminal.
+    Updated .DS_Store
+
+commit efeccb1740f7b20e094eeafa53764ab4383d82ab
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Sun May 29 11:19:44 2022 +0800
+
+    Updated Functions.java
+            - Created, Wrote and finshed all methods required to complete 2C, Time Conversion
+    Updated Menu.java
+            - Made is so that the switch case calls the Function created for 2C
+    Updated Preliminary Description
+            - Corrected more grammar
+
+commit 886864c693f050c1264059ff2eaf40e0e16640c0
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Sun May 29 11:13:19 2022 +0800
+
+    Update Preliminary Description
+            - Changed wording and grammar to make sense
+
+commit f310240c7b76ce152024bb155835bd6c8dbc3c7d
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Sun May 29 10:28:43 2022 +0800
+
+    Updated Preliminary Description
+            - Finished Description for 2C
+
+commit 3f39f0afa848c52beb3229cb353cac52476f8561
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Fri May 27 17:03:04 2022 +0800
+
+    Altered spelling of d_Remove..., adding "d" to "An"
+
+commit 0d1a1bfc4ab1706f05e1750e74f02deba4ec9fab
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Fri May 27 17:01:25 2022 +0800
+
+    Updated Menu.java
+            - Called Function for case 1D
+    Updated Functions.java
+            - Change file output of function a, b, c, d
+            - Created, Wrote, and Finished d_RemoveNumericsAndConvertCase
+
+commit db42b3569cb0c9fabaddba61826da8d95d39dd26
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Fri May 27 16:49:37 2022 +0800
+
+    Updated Functions.java
+            - Commented out unused code
+
+commit 36b9469b959960bd98d6de8ee6b223e8c5b8dc66
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Fri May 27 16:46:46 2022 +0800
+
+    Updated Markdown Report
+            - Added template for remaining categories that need to be complete
+
+commit 309000e0e01bedd12b9106da98dd8f77b4f12030
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Fri May 27 16:36:17 2022 +0800
+
+    Updated Functions.java
+            - Removed code in arrayToNumber;
+            - Removed code to check against periods and commas
+            - Removed code to calculate commas and periods being valid or not
+
+commit 4baf480b002453ef936fffe2d1e711aa0386e16a
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Fri May 27 16:32:44 2022 +0800
+
+    Updated Functions.java
+            - Created and Wrote c_StringIsValidNumber
+            - Created and Wrote arrayToNumbers
+    Updated Menu.java
+            - Called c_StringIsValidNumber during case
+    Created Cat1b from copy of Cat1a
+
+commit f46bc667e0737d39a664d4d572091ea7f1773285
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Fri May 27 15:12:05 2022 +0800
+
+    Updated DS_Store
+    Updated Menu.java
+            - Made it so that menu calls the functions for 1B
+    Updated Function.java
+            - Created, Wrote, and Finished b_DoNumericsExist
+            - Created, Wrote, and Finished checkNumericsExist
+            - Reordered the order of functions
+            - Added lines between outputs and menu getting printed again
+
+commit d9f900779c4c736b9c8476bf139174779e5d4c4f
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 18:43:13 2022 +0800
+
+    Updated Markdown Report
+            - Changed formatting of paragraphs to put text on seperate lines compared to <p> and </p>
+            - Added blockquote to sub-section of Modules: 1B
+
+commit 5d23bc70cde063a030a3de32aa3f870df63255d5
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 18:37:13 2022 +0800
+
+    Updated Markdown Report
+            - Added to initial Module Description, description
+            - Added, and complete sub-section of Module Description: 1A
+
+commit e0eed7cb9ac1c33071af113545572a29f1a38ed5
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 18:23:06 2022 +0800
+
+    Update Markdown Report
+            - Added and completed Introduction section
+            - Added Module Description section
+
+commit 58df2c7ba0591faea42b0fd57a4e7643513900fd
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 18:03:36 2022 +0800
+
+    Update Menu.java
+            - Changed displayed conversion options to look even nicer
+
+commit 19737126111a6b2fd2a36a6ae9882fc3c0aa17e3
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 18:02:49 2022 +0800
+
+    Updated Menu.java
+            - Changed displayed conversion options to look nicers
+
+commit 3365adb83de351573ca07e6cbea133504be94c6a
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 17:25:52 2022 +0800
+
+    Updated Functions.java
+            - Fixed range for arrayToLower to get the right letters
+            - Fixed arrayToLower, to add instead of subtracting 32
+            - Removed closing of scanners, as it caused program to crash
+    Updated Menu.java
+            - Removed closing of scanners, as it caused program to crash
+
+commit d92e2c88580c577aa3d5ade8a86cc52721483ae3
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 17:10:01 2022 +0800
+
+    Updated Functions.java
+            - Created, Wrote, and Finished arrayToUpper
+            - Created, Wrote, and Finished arrayToLower
+            - Finished a_ConvertCases
+    Updated Menu.java
+            - Closed Scanners for all functions
+            - Removed calling of old functions
+            - Added calling of Functions.a_ConvertCases
+
+commit 3f5f6d9573c0f6c9ced24b241a769c62761a5fce
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 16:55:27 2022 +0800
+
+    Added extra space by accident to Cat1a.java
+
+commit 72fc355363a242d77e7efa6502df35af9aee8134
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 16:47:36 2022 +0800
+
+    Updated .DS_Store
+    Updated Functions.java
+            - Changed a_ConvertCases passed list data type from String to char[]
+    Updated Menu.java
+            - Created function called stringInputAndConfirm
+            - Removed loop from runManualInput and called stringInputAndConfirm
+            - Created, Wrote, and Finished readFile
+            - Removed previous callings from main
+
+commit bcdf46a958d3462407775e2435dd0f83bcae2414
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 16:08:55 2022 +0800
+
+    Updated Menu.java
+            - Created, Wrote, and Finished inputTypeMenu
+            - Created, Wrote, and Finished runManualInput
+            - Created runAutomaticInput
+
+commit 6be6d9835cf0bdeb9d8d5ead9e6b9b92cc6dca9a
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 15:41:24 2022 +0800
+
+    Created, Wrote, and Finished askWhichCaseMenu
+
+commit 043c7c203ab2e3f81fd6048cda1b87191fe1879b
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 15:33:20 2022 +0800
+
+    Updated Preliminary Description
+            - Correct spelling of a_ConvertCases
+
+commit c04c4f53755cb8135dbec9e28d3617f34483f981
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 15:29:25 2022 +0800
+
+    Created, Wrote, and Finished writeInRow
+    Updated Preliminary Description
+            - Added description for writeInRow method
+
+commit e61c229bc55e41c8248059634413dd61e0e0ea12
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 15:17:18 2022 +0800
+
+    Wrote and Finished code for charArrayToAsciiArray
+    Added, Wrote, and FInished code for asciiArrayToString
+
+commit bdbd4dcb090e0aaecd65871cc9714d6e13f0506a
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 15:10:13 2022 +0800
+
+    Created Functions.java
+    Added charArrayToAsciiArray method to Functions.java
+
+commit d3c2bc624197dce13d53f8c033315deba0809496
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 15:08:04 2022 +0800
+
+    Change formatting to make it easier to read
+
+commit 06239513afaf3737e2ab1eb63cbbb1c41f867099
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 15:03:25 2022 +0800
+
+    Moved all Cat## files into a folder called Unused Code
+
+commit eb7d34dc4863af1a7df79261b30043f53a7e0e60
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 15:01:02 2022 +0800
+
+    Updated DS_Store
+
+commit 85aff8ec82d64c3fa0dfbf6169aaa3493c52e59b
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Thu May 26 14:59:05 2022 +0800
+
+    Re-wrote entire Preliminary Description, based of knowledge from tutor saying that:
+            .toUpperCase() and .toLowerCase() are not allowed
+            .isDigit() is not allowed
+
+commit 3489a395d5e25e36071b6bdc5ce0b01eb17bca9d
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 16:38:47 2022 +0800
+
+    Updated Cat1a.java
+            - Programmed runConvertToUpper
+            - Programmed runConvertoLower
+
+commit 821e0cdf4f100ce2b26073b58bdf8174113d8f9a
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 16:22:09 2022 +0800
+
+    Updated Cat1a.java
+            - Initialized stringInput
+            - Renamed input variables
+            - Created runningCaseToConvertTo loop
+            - Created while and switch case for above
+            - Created new functions for Upper and Lower case conversions
+            - Made it so that case will point to those new functions
+
+commit 2abc35a0b0eff077d0705407cf110ef8efc45451
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 16:10:03 2022 +0800
+
+    Updated Cat1a.java
+            - Added extra line asking for user input for whether they'd like to continue
+            - Altered text to make it look nicer
+
+commit ad8457a9356d9bfc85776a5f70649548b50cf102
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 16:06:50 2022 +0800
+
+    Updated Cat1a.java
+            - Altered Menu to have line breaks to look nicer
+            - Added extra line of text to ask for user input
+            - Created loop for asking user to confirm their string
+            - Created switch case for asking user to confirm their string
+
+commit c4bcafd78987d48b35d4c164807e948e20a96bb4
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 15:44:01 2022 +0800
+
+    Updated .DS_Store
+    Updated Menu.java
+            - Moved input within while loop to fix unwanted looping
+            - Altered Menu layout, moving 0 to the bottom of the Menu
+            - Altered Menu layout, adding line breaks and spaces to make it look nicer
+
+commit 0767b4124c13c0e605956ebb9ed9df7b3971c7bc
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 15:37:26 2022 +0800
+
+    Renamed Main.java to Menu.java
+    Update Menu.java
+            - Changed class name from Main to Menu
+
+commit 4d3fd660b12833abf5c8f18c2f81efe1b468f775
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 15:31:06 2022 +0800
+
+    Updated Cat1b.java
+            - Changed title to reflect program
+    Updated Cat1c.java
+            - Changed title to reflect program
+    Updated Cat1d.java
+            - Changed title to reflect program
+    Update Cat2c.java
+            - Changed title to reflect program
+
+commit c3a99643bf85b0545a7f635058175292ed544b15
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 15:24:39 2022 +0800
+
+    Updated Main.java
+            - Cases now call the respective class files and run their main functions
+            - Created while loop to run Main.java menu in loop
+            - Created runningMain variable for above purpose
+            - Created case and option to exit menu loop, thus exitting program
+            - Moved case into while loop
+            - Moved Menu printing into while loop
+
+commit 615fce49d94da461e7a728f5a86cdbe09e5e0f83
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 15:20:48 2022 +0800
+
+    Corrected the spelling of "coherency" in Preliminary Description
+
+commit 3ea09789bc1b6cfed5197158ab44a8181554f000
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 15:17:49 2022 +0800
+
+    Update Preliminary Description to be more detailed and contain more information
+            - Information regarding what I plan to do and how I intend to operate the program
+            - Information explaining the basic layout of the program structure.
+            - Information explaining how I intend to make the java files
+
+commit 733f5780570e139d35cf2069060b3f0498800118
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 15:04:46 2022 +0800
+
+    Added .DS_Store
+    Created Cat1b from copy of Cat1a
+    Created Cat1c from copy of Cat1a
+    Created Cat1d from copy of Cat1a
+    Created Cat2c from copy of Cat1a
+
+commit 5d96c52813dea4c26e2e8f179e5b41e10aa36377
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 15:00:27 2022 +0800
+
+    Updated Cat1a.java
+            - Added initial query of Manual or Read mode
+            - Setup printing menu
+            - Setup cases
+            - Setup empty runManualMode() function
+            - Setup empty runReadMode() funciton
+
+commit ad5f7d1d80c961edd847a297e4c4af1231fee5df
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 14:48:33 2022 +0800
+
+    Updated .DS_Store
+    Create Cat1a.java
+
+commit fd8d171fec5285ca8df5d398735cbed060bfb9ad
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 14:45:13 2022 +0800
+
+    Updated .DS_Store
+    Created Mana.java
+
+commit eaeb8cc82f7a26ac01607a84c12f0e9fea602692
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 14:33:13 2022 +0800
+
+    Moved Assignment PDF into Documents
+
+commit 5f8ccdce92e5b4baaccbd10051434ea2d4cf27f5
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 14:30:08 2022 +0800
+
+    Added Title Page to Markdown Report
+
+commit bf8e3e5aefc61b6b26da65b2115ecdd68a498692
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 14:28:32 2022 +0800
+
+    Corrected Spelling Mistakes in Preliminary Description
+
+commit 392ab047d26760a8810af28041cdb621e7ed8157
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 13:56:23 2022 +0800
+
+    Added Markdown Report file
+
+commit c8327244006e7822d122bcd7abb656ba62530974
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 13:55:48 2022 +0800
+
+    Added hidden MacOS files: .DS_Store
+
+commit 1977900841d487cd3ea1d466e076201a5ddc5c15
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 13:49:22 2022 +0800
+
+    Update Category 1 & 2, adding in file reading and writing
+
+commit e53c679ec62256bca4a7c192494025f568d89682
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 13:30:01 2022 +0800
+
+    Updated Category 2.c of Preliminary Decription
+
+commit ff1fff746da7642e77b8689772858120ce84f983
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 13:18:29 2022 +0800
+
+    Updated Category 1.b, 1.c, 1.d of Preliminary Description
+
+commit 902fa335fae7b408bf66c43547b2348444640e2b
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 13:00:24 2022 +0800
+
+    Updated Category 1.a of Preliminary Description
+
+commit 022134e230b8960f40930ac942a972f44ac3caf8
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Tue May 24 12:55:41 2022 +0800
+
+    Added hidden MacOS file
+    Added 3.2 Preliminary Description of Modules Documentation
+
+commit 32515f6749844163d654621587e70b5e60f7e211
+Author: Jason Nguyen <2055141@student.curtin.edu.au>
+Date:   Sun May 22 21:13:21 2022 +0800
+
+    Initial Commit

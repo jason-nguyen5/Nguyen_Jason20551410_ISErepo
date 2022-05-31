@@ -128,78 +128,127 @@ Below is how my new code will run:
 
 - Functions:
 	> There will be a method called "charArrayToAsciiArray", which will convert a char array into an ascii array.
-		>> This method takes in an array, and then it will loop through all the elements of the array and type cast them to an integer.
-		>> During this loop, it'll set the current element of a "returnArray" to the currently type casted value.
-		>> Method then returns the "returnArray"
+		> This method takes in an array, and then it will loop through all the elements of the array and type cast them to an integer.
+		> During this loop, it'll set the current element of a "returnArray" to the currently type casted value.
+		> Method then returns the "returnArray"
 
 	> There will be a method called "asciiArrayToString", which will convert an array of ascii values into a string.
-		>> This method cycles through the array and set a returnString to returnString + the typecasted value of element I.
+		> This method cycles through the array and set a returnString to returnString + the typecasted value of element I.
 
 	> There will be a method called "writeOneRow", which will save a string to a given file.
-		>> It'll run code taken from COMP1007 Lecture 7.
-		>> It'll take in a inFileName, and a stringToWrite and write the string into a file.
+		> It'll run code taken from COMP1007 Lecture 7.
+		> It'll take in a inFileName, and a stringToWrite and write the string into a file.
+		> And catch any errors and print an error message.
+
+	> Create a method called "askWhichCaseMenu" that will ask and return the case that the user chooses
+		> Run a while loop that'll ask for the case they user would like to convert to.
+			> Print out asking the user if they'd like to conver to uppercase or lowercase.
+			> Read and check if the input was "u" or "l".
+				- If it is "u", set "wantUpper" to true and stop the loop.
+				- Else, it'll set "wantUpper" to false and stop the loop.
+		> Return the "wantUpper" value.  
 	
 	> There will be a method called "a_ConvertCases", which will be used for converting strings from lower case and upper case.
-		>> This method will run a menu loop that asks the user to choose between converting to uppercase and lowercase.
-		>> Afterwards the program will run a for loop that will get the i'th element of the list, and set that as a temp array.
-		>> This array will then passed into "charArrayToAsciiArray" to which it'll then be set to the temp array again.
-		>> This temp array will then be passed into a function called "arrayToUpper" or "arrayToLower" depending on the option chosen by the user.
-			>>> The program will check if the int is within the range of being either lowercase or uppercase and convert them to the right case by adding or subtracting 32 for each respective cases.
-			>>> It'll loop through the entire array and set the current element of the passed array.
-			>>> Then it'll run asciiArrayToString method and set the output to "returnString"
-			>>> Afterwards it'll return this string.
-		>> The returned value will then be saved into a "convertedString" variable.
-		>> And the program will print both the original and "convertedString" variable out to the user and save it into a next row of a new file.
-		>> The program will then loop through and then afterwards end itself and save that new file.
+		> This method will run a menu loop that asks the user to choose between converting to uppercase and lowercase (askWhichCaseMenu).
+		> Afterwards the program will run a for loop that will get the i'th element of the list, and set that as a temp array.
+		> This array will then passed into "charArrayToAsciiArray" to which it'll then be set to the temp array again.
+		> This temp array will then be passed into a function called "arrayToUpper" or "arrayToLower" depending on the option chosen by the user.
+			> The program will check if the int is within the range of being either lowercase or uppercase and convert them to the right case by adding or subtracting 32 for each respective cases.
+			> It'll loop through the entire array and set the current element of the passed array.
+			> Then it'll run asciiArrayToString method and set the output to "returnString"
+			> Afterwards it'll return this string.
+		> The returned value will then be saved into a "convertedString" variable.
+		> And the program will print both the original and "convertedString" variable out to the user and save it into a next row of a new file.
+		> The program will then loop through and then afterwards end itself and save that new file.
 	
-	> There will be a method called "b_DoNumericsExist", which will be used for checking if a numeric value exist in a string.
-		>> This method will run loop that runs through the passed list and set the current element of the list to a temp array.
-		>> This temp array is then going to be passed into another method called "checkNumericsExist"
-			>>> "checkNumericsExist" will return a true or false value.
-			>>> It takes the array and cycles through it, checking if there is a value in the array that is between 48 and 57 inclusive.
-			>>> If it finds a match it'll set a variable called "numericsExistInString" to true.
-			>>> Then the function will return "numericsExistInString".
-		>> Based on the returned value the function will print out whether or not a numeric value existed within the provided string.
-	
-	> A method called "c_StringIsValidNumber" will be used to check if a provided string is a number or not.
-		>> The program will run a for loop that will get the i'th element of the list, and set that as a temp array.
-		>> Afterwards, inside this loop the temp array is passed into a function called charArrayToAsciiArray to convert the char array to an ascii array.
-		>> This array is then sent to "arrayToNumbers" and set 0'th element of the return value to a string variable.
-			>>> Inside "arrayToNumbers" it'll loop based on the length of the array.
-			>>> Inside this loop it'll set "arrayInput" to the i'th element and compare it to a switch case.
-				- If arrayInput is between 48 and 57 inclusive, it'll set outputString to outputString + the respective number
-				- Else, it'll set invalidString to true, and set "nonNumberString" to the "noNumberString" + the value of the current element.
-			>>> At the end it'll check if invalidString is true, or numPeriodsInString is greater than 2.
-				- If so, the returnList element 0 is set to "was an invalid number."
-				- Otherwise the returnList element 0 is set to " was valid the valid number: " + outputString.
-			>>> Plus it'll set the returnList element 1 to "nonNumberString"
-		>> Afterwards, the program will print out "The string: "" + asciiArrayToString(tempArray) + returnList.get(0).
+	> "arrayToUpper" will take in the int array and convert them to uppercase int values.
+		> Run a for loop that'll run for the length of the input array.
+		> Check if the current value of "inputArray" is <123 and >96.
+			- If it was within the range, the current value of "returnArray" is set to "inputArray" - 32.
+			- Else, the current value of "returnArray" is set to "inputArray".
+		> Afterward, it'll return the "returnArray".
 
+	> "arrayToLower" will take in the int array and convert them to lowercase int values.
+		> Run a for loop that'll run for the length of the input array.
+		> Check if the current value of "inputArray" is <91 and >64.
+			- If it was within the range, the current value of "returnArray" is set to "inputArray" + 32.
+			- Else, the current value of "returnArray" is set to "inputArray".
+		> Afterward, it'll return the "returnArray".
+
+	> There will be a method called "b_DoNumericsExist", which will be used for checking if a numeric value exist in a string.
+		> This method will run loop that runs through the passed list and set the current element of the list to a temp array.
+		> This temp array is then going to be passed into another method called "checkNumericsExist"
+			> "checkNumericsExist" will return a true or false value.
+			> It takes the array and cycles through it, checking if there is a value in the array that is between 48 and 57 inclusive.
+			> If it finds a match it'll set a variable called "numericsExistInString" to true.
+			> Then the function will return "numericsExistInString".
+		> Based on the returned value the function will print out whether or not a numeric value existed within the provided string.
+		> Write the result to a text file, using "writeOneRow"
+
+	> "checkNumericsExist" is a method that'll check if the a number exist within an array.
+		> Set "booleanToReturn" to false.
+		> Run a for loop that run for the length of the "inputArray".
+		> Check if the current value of the "inputArray" is <= 57 and >= 48.
+			- If so, "booleanToReturn" will be set to true.
+		> Return the "booleanToReturn".
+
+	> A method called "c_StringIsValidNumber" will be used to check if a provided string is a number or not.
+		> The program will run a for loop that will get the i'th element of the list, and set that as a temp array.
+		> Afterwards, inside this loop the temp array is passed into a function called charArrayToAsciiArray to convert the char array to an ascii array.
+		> This array is then sent to "arrayToNumbers" and set 0'th element of the return value to a string variable.
+		> Afterwards, the program will set "stringToPrint" to "\nThe string: " + asciiArrayToString(asciiArray) + returnedList.get(0)
+		> And then save the output string to a text file using "writeOneRow".
+
+	> A method called "arrayToNumbers", will return a list of strings: validity, string without numbers, number only string
+		> Run a for loop based on the length of the array.
+			> Inside this loop it'll set "inputArray" to the i'th element.
+				- If inputArray is between 48 and 57 inclusive, it'll set outputString to outputString + the typecasted number
+				- Else, it'll set invalidString to true, and set "nonNumberString" to the "nonNumberString" + the value of the current element.
+			> If the "outputString" is null, then set the "outputString" to "0".
+			> At the end it'll check if invalidString is true.
+				- If so, it'll add "was an invalid number.", "nonNumberString" and "outputString" to returnList. 
+				- Otherwise it'll add " was the valid number: ", "nonNumberString" and "outputString" to returnList. 
+			> Then it returns the returnList.
 
 	> A method called "d_RemoveNumericsAndConvertCase", will take a number and remove the numbers, along with converting the case of the string.
-		>> This method will run a menu loop that asks the user to choose between converting to uppercase and lowercase.
+		>> This method will run a menu loop that asks the user to choose between converting to uppercase and lowercase. (askWhichCaseMenu)
 		>> Afterwards the program will run a loop that'll get the i'th element of the list, and set that as a temp array.
 		>> This array will then passed into "charArrayToAsciiArray" to which it'll then be set to the temp array again.
 		>> This array is then sent to "arrayToNumbers" and set 1st element of the return value to an array.
-		>> This array is then sent to "arrayToUpper" or "arrayToLower" respectively.
-		>> The returned value will then be saved into a "convertedString" variable.
-		>> And printed out to the user.
+		> Convert the string to a char array using "runStringToCharArray" from Menu.java.
+		> Covert this char array to an ascii array using "charArrayToAsciiArray"
+		> A new variable called "convertedAsciiArray" is then sent to "arrayToUpper" or "arrayToLower" based on the user's input.
+		> The returned value will then be saved into a "convertedString" variable after being passed through "asciiArrayToString". 
+		> And printed out to the user and saved using "writeOneRow".
 
-	> There will be a method called twoC_TimeConversion, that will be used to convert a number from second, minutes, or hours to hours, minutes, or seconds
-		>> The program will run a new menu function called WhichTimeConversions.
-			>>> whichTimeConversions will run a menu loop that asks the user which unit they'd like to convert from.
-			>>> The unit choose is set to element 0 of returnArray
-			>>> Then it'll ask which unit they'd like to go to, revealing options that weren't the same as the one chosen.
-			>>> This second unit is then set to element 1 of returnArray.
-			>>> returnArray is then returned
-		>> Afterwards, element 0 and 1 are set to convertFrom and convertTo respectively.
-		>> The charArray will be set to the i'th value in the list.
-		>> Then char array to ascii array using charArrayToAscii.
-		>> Then passed to arrayToNumbers, and setting element 2 of the returned list to timeNumber.
-		>> Afterwards, there will run a switch case that'll check the convertFrom value against 'h', 'm', 's'.
-		>> Afterwards, in each case it'll run an if statement that'll check if the convertTo equals 'h', 'm', 's' and perform the multiplication.
-		>> During the multiplication, it'll as get the module values and set the respective units to the remainder.
-		>> After the convertedHour, convertedMinute, convertedSecond are all set, it'll exit the case.
-		>> At the end it'll print out a string that states how much the original string is in x units.
+	> There will be a method called "twoC_TimeConversion", that will be used to convert a number from second, minutes, or hours to hours, minutes, or seconds
+		> The program will run a new menu function called "whichTimeConversions" and set it to "convertFrom" and "convertTo" variables.
+		> Then run a for loop, the duration of the list size.
+		> The charArray will be set to the i'th value in the list.
+		> Then char array to ascii array using "charArrayToAscii".
+		> Then passed to "arrayToNumbers", and setting element 2 of the returned list to "timeNumber".
+		> Afterwards, there will run a switch case that'll check the "convertFrom" value against 'h', 'm', 's'.
+		> Afterwards, in each case it'll run an if statement that'll check if the convertTo equals 'h', 'm', 's' and perform the multiplication.
+		> During the multiplication, it'll as get the module values and set the respective units to the remainder.
+		> After the convertedHour, convertedMinute, convertedSecond are all set, it'll exit the case.
+		> At the end it'll print out a string that states how much the original string is in x units.
+		> And then write to a file using "writeOneRow".
 
 
+	> "whichTimeConversions" function that'll ask which unit they'd like to select.
+		> Run a menu loop that asks the user which unit they'd like to convert from.
+		> Print out the options the user can choose from.
+		> Set the input to the next string.
+		> Use a switch case to compare the string.
+			- If the string = "h" set the "returnChar" to 'h'.
+			- If the string = "m" set the "returnChar" to 'm'.
+			- If the string = "s" set the "returnChar" to 'c'.
+			- Otherwise tell the user the input was invalid
+		> Return the "returnChar".
+	
+	> "getFromUnit" will get the char and convert to the full name of unit.
+		> Check the convertFrom that is passed in.
+			- If it equals 'h', then set the "returnString" to " Hours"
+			- If it equals 'h', then set the "returnString" to " Minutes"
+			- Else, set "returnString" to " Seconds".
+		> Return the "returnString".

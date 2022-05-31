@@ -43,8 +43,6 @@ As for testing, white and black-box testing have been performed throughout the c
 
 <div style="page-break-after: always;"></div>
 
-<br>
-
 ---
 ## Module Description
 ---
@@ -148,6 +146,8 @@ This function is designed to take in a string and then remove any numbers that a
 This code is used to convert a given amount of time to a different unit of time. It can convert seconds, to minutes or hours, vice versa in any combination. You could go directly from hours to seconds, rather than hours to minutes. Doing it this way made it a lot easier without having to think about too much extra. It works by taking in the the units the user in coming from and then which units they'd like to convert to. An overview of the code was taken from the Preliminary Decription, adjusted and displayed below:
 <br>
 
+<div style="page-break-after: always;"></div>
+
 > - The function will start by running a new menu funciton called "whichTimeConversion".
 > - This'll get the units in which the user wants to convert to and from.
 > - It'll set the units to "convertTo" and "convertFrom".
@@ -215,6 +215,8 @@ All test cases have had their test functionality be put into a file called TestF
 </p>
 
 <br>
+
+<div style="page-break-after: always;"></div>
 
 ### 1A. Converting a String to Uppercase or Lowercase
 ---
@@ -385,7 +387,7 @@ For 1D, "d_RemoveNumericsAndConvertCase" does not return any values, but instead
 | "Doctor Strange in the Multiverse of Madness" + u | "doctor strange in the multiverse of madness" |
 </p>
 
-<br>
+<div style="page-break-after: always;"></div>
 
 ### 2C. Conveting a Number Between Hours, Minutes and Seconds
 ---
@@ -572,4 +574,8 @@ Honestly, I didn't manage to fully program my code, as per described in the prel
 
 <p style = "text-align: justify;">
 Although there was some functionality that was lost I'm actually still happy with all the other programs, as they run to my expectation. Testing was rather difficult and I'm upset that I wasn't able to test all the functions, since most of them did not return any values. In the future I would plan more towards this and only have a limited amount of functions or if possible, only one (being the main) that doesn't return values. Tetsing the black-box cases was done, however not extensively, since most of the testing was only done with either boundary value analysis or equivalence partioning, and not both. Next time I would attempt to try and have enough test cases where I could both testing methods for my black-box testing.
+</p>
+
+<p style = "text-align: justify;">
+Overall, I believe I greatly underestimated the difficulty of this porject, however I managed to adapt and complete the work up to my personal standards. However, completing this has only heightened my future expectations and standards, and broadened my understanding of software design and engineering.
 </p>
